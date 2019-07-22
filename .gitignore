@@ -1,0 +1,74 @@
+
+ #
+ # LOS ARCHIVOS QUE SE ENCUENTRAN AQUÍ LISTADOS NO PUEDEN AÑADIRSE AL
+ # REPOSITORIO. GIT LOS IGNORARÁ AUTOMÁTICAMENTE PARA FACILITAR LA
+ # ACTUALIZACIÓN DEL REPOSITORIO.
+ #
+
+
+ #
+ # Archivos generales
+ #
+
+*.log
+
+ #
+ # Archivos de sistema operativo
+ #
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+ #
+ # Archivos comprimidos
+ #
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+ #
+ # Archivos de texto no plano
+ #
+
+*.azw
+*.azw3
+*.djvu
+*.epub
+*.fb2
+*.iba
+*.lit
+*.lrf
+*.lrs
+*.lrx
+*.mobi
+*.pdf
+*.rft
+
+ #
+ # Ejecutables y binarios
+ #
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+ #
+ # LaTeX
+ #
+
+*.synctex.gz
+*.aux
