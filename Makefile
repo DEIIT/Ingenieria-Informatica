@@ -51,137 +51,137 @@
 HOME = .
 
 # Cuatrimestres
-C11 = $(HOME)/1º\ 1er\ cuatrimestre
-C12 = $(HOME)/1º\ 2º\ cuatrimestre
-C21 = $(HOME)/2º\ 1er\ cuatrimestre
-C22 = $(HOME)/2º\ 2º\ cuatrimestre
-C31 = $(HOME)/3º\ 1er\ cuatrimestre
-C32 = $(HOME)/3º\ 2º\ cuatrimestre
-C41 = $(HOME)/4º\ 1er\ cuatrimestre
-C42 = $(HOME)/4º\ 2º\ cuatrimestre
-FCI = $(HOME)/Formación\ complementaria\ interdisciplinar
-PE = $(HOME)/Prácticas\ de\ empresa
-TFG = $(HOME)/Trabajos\ de\ fin\ de\ grado
+C11  =  $(HOME)/1º\ 1er\ cuatrimestre
+C12  =  $(HOME)/1º\ 2º\ cuatrimestre
+C21  =  $(HOME)/2º\ 1er\ cuatrimestre
+C22  =  $(HOME)/2º\ 2º\ cuatrimestre
+C31  =  $(HOME)/3º\ 1er\ cuatrimestre
+C32  =  $(HOME)/3º\ 2º\ cuatrimestre
+C41  =  $(HOME)/4º\ 1er\ cuatrimestre
+C42  =  $(HOME)/4º\ 2º\ cuatrimestre
+FCI  =  $(HOME)/Formación\ complementaria\ interdisciplinar
+PE   =  $(HOME)/Prácticas\ de\ empresa
+TFG  =  $(HOME)/Trabajo\ de\ fin\ de\ grado
 
 # Ramas 3º 2º cuatrimestre
-CSI32 = $(C32)/Computación\ y\ sistemas\ inteligentes
-IC32 = $(C32)/Ingeniería\ de\ computadores
-IS32 = $(C32)/Ingeniería\ de\ software
-SI32 = $(C32)/Sistemas\ de\ información
-TI32 = $(C32)/Tecnología\ de\ la\ información
+CSI32 =  $(C32)/Computación\ y\ sistemas\ inteligentes
+IC32  =  $(C32)/Ingeniería\ de\ computadores
+IS32  =  $(C32)/Ingeniería\ de\ software
+SI32  =  $(C32)/Sistemas\ de\ información
+TI32  =  $(C32)/Tecnología\ de\ la\ información
 
 # Ramas 4º 1er cuatrimestre
-CSI41 = $(C41)/Computación\ y\ sistemas\ inteligentes
-IC41 = $(C41)/Ingeniería\ de\ computadores
-IS41 = $(C41)/Ingeniería\ de\ software
-SI41 = $(C41)/Sistemas\ de\ información
-TI41 = $(C41)/Tecnología\ de\ la\ información
+CSI41 =  $(C41)/Computación\ y\ sistemas\ inteligentes
+IC41  =  $(C41)/Ingeniería\ de\ computadores
+IS41  =  $(C41)/Ingeniería\ de\ software
+SI41  =  $(C41)/Sistemas\ de\ información
+TI41  =  $(C41)/Tecnología\ de\ la\ información
 
 # Ramas 4º 2º cuatrimestre
-CSI42 = $(C42)/Computación\ y\ sistemas\ inteligentes
-IC42 = $(C42)/Ingeniería\ de\ computadores
-IS42 = $(C42)/Ingeniería\ de\ software
-SI42 = $(C42)/Sistemas\ de\ información
-TI42 = $(C42)/Tecnología\ de\ la\ información
+CSI42 =  $(C42)/Computación\ y\ sistemas\ inteligentes
+IC42  =  $(C42)/Ingeniería\ de\ computadores
+IS42  =  $(C42)/Ingeniería\ de\ software
+SI42  =  $(C42)/Sistemas\ de\ información
+TI42  =  $(C42)/Tecnología\ de\ la\ información
 
  #
   # Directorios de asignaturas
  #
 
-AA = $(CSI32)/Aprendizaje\ automático
-AC = $(C22)/Arquitectura\ de\ computadores
-ACAP = $(CSI32)/Arquitectura\ y\ computación\ de\ altas\ prestaciones
-ADB = $(SI32)/Administración\ de\ bases\ de\ datos
-ALEM = $(C11)/Álgebra\ lineal\ y\ estructuras\ matemáticas
-ALG = $(C22)/Algorítmica
-AO = $(IS42)/Animación\ por\ ordenador
-AS = $(IC32)/Arquitectura\ de\ sistemas
-BDD = $(IS41)/Bases\ de\ datos\ distribuidas
-CA = $(C11)/Cálculo
-CEGE = $(C4FCI)/Creación\ de\ empresas\ y\ gestión\ emprendedora
-CII = $(IC42)/Circuitos\ integrados\ e\ impresos
-CPD = $(IC41)/Centros\ de\ procesamiento\ de\ datos
-CRIM = $(TI41)/Compresión\ y\ recuperación\ de\ información\ multimedia
-CRIP = $(CSI42)/Criptografía\ y\ computación
-CUIA = $(TI32)/Computación\ ubicua\ e\ inteligencia\ ambiental
-DAI = $(TI41)/Desarrollo\ de\ aplicaciones\ para\ internet
-DBA = $(IS41)/Desarrollo\ basado\ en\ agentes
-DDSI = $(C31)/Diseño\ y\ desarrollo\ de\ sistemas\ de\ información
-DGP = $(IS41)/Dirección\ y\ gestión\ de\ proyectos
-DHD = $(IC32)/Desarrollo\ de\ hardware\ digital
-DI = $(C4FCI)/Derecho\ informático
-DIU = $(IS32)/Diseño\ de\ interfaces\ de\ usuario
-DS = $(IS32)/Desarrollo\ de\ software
-DSE = $(IC32)/Diseño\ de\ sistemas\ electrónicos
-DSD = $(IS32)/Desarrollo\ de\ sistemas\ distribuidos
-EC = $(C21)/Estructura\ de\ computadores
-ED = $(C21)/Estructura\ de\ datos
-EISI = $(C4FCI)/Ética,\ informática\ y\ sociedad\ de\ la\ información
-ES = $(C12)/Estadística
-GRD = $(IS41)/Gestión\ de\ recursos\ digitales
-FBD = $(C22)/Fundamentos\ de\ bases\ de\ datos
-FFT = $(C11)/Fundamentos\ físicos\ y\ tecnológicos
-FIS = $(C22)/Fundamentos\ de\ ingeniería\ del\ software
-FP = $(C11)/Fundamentos\ de\ programación
-FR = $(C31)/Fundamentos\ de\ redes
-FS = $(C11)/Fundamentos\ del\ software
-IA = $(C22)/Inteligencia\ artificial
-IC = $(CSI32)/Ingeniería\ del\ conocimiento
-IES = $(C12)/Ingeniería,\ empresa\ y\ sociedad
-IG = $(C31)/Informática\ gráfica
-II = $(IC41)/Informátia\ industrial
-IN = $(IS41)/Inteligencia\ de\ negocio
-ISE = $(C31)/Ingeniería\ de\ servidores
-ISI = $(SI32)/Ingeniería\ de\ sistemas\ de\ información
-IV = $(TI41)/Infraestructura\ virtual
-LMD = $(C12)/Lógica\ y\ métidos\ discretos
-LP = $(IS41)/Lógica\ y\ programación
-MC = $(C31)/Modelos\ de\ computación
-MCA = $(CSI32)/Modelos\ de\ computación\ avanzada
-MDA = $(IS41)/Metodologías\ de\ desarrollo\ ágil
-MEI = $(IC42)/Mantenimiento\ de\ equipos\ informáticos
-MH = $(CSI32)/Metaheurísticas
-MP = $(C12)/Metodología\ de\ la\ programación
-NPI = $(CSI41)/Nuevos\ paradigmas\ de\ interacción
-NTP = $(IS42)/Nuevas\ tecnologías\ de\ la\ programación
-PDIH = $(SI42)/Periféricos\ y\ dispositivos\ de\ interfaz\ humana
-PDM = $(TI42)/Programación\ de\ dispositivos\ móviles
-PDOO = $(C21)/Programación\ y\ diseño\ orientado\ a\ objetos
-PDS = $(TI42)/Procesamiento\ digital\ de\ señales
-PGV = $(IS41)/Programación\ gráfica\ de\ videojuegos
-PL = $(CSI41)/Procesadores\ de\ lenguajes
-PLD = $(CSI42)/Programación\ lúdica
-PPR = $(IS42)/Programaciones\ paralelas
-PTC = $(CSI41)/Programación\ técnica\ y\ científica
-PW = $(SI32)/Programación\ web
-RMS = $(TI42)/Redes\ multiservicio
-RI = $(CSI42)/Robótica\ industrial
-RINF = $(IS41)/Recuperación de\ información
-RSC = $(IS41)/Redes\ y\ sistemas\ complejos
-SCD = $(C21)/Sistemas\ concurrentes\ y\ distribuidos
-SCGC = $(SI42)/Sistemas\ cooperativos\ y\ gestión\ de\ contenidos
-SE = $(IC41)/Sistemas\ empotrados
-SG = $(IS32)/Sistemas\ gráficos
-SIBW = $(IS32)/Sistemas\ de\ información\ basados\ en\ web
-SIE = $(SI32)/Sistemas\ de\ información\ para\ empresas
-SIG = $(IS41)/Sistemas\ de\ información\ geográficos
-SMD = $(SI32)/Sistemas\ multidimensionales
-SMM = $(TI32)/Sistemas\ multimedia
-SMP = $(IC32)/Sistemas\ con\ microprocesadores
-SO = $(C21)/Sistemas\ operativos
-SPSI = $(TI41)/Seguridad\ y\ protección\ de\ sistemas\ informáticos
-SS = $(CSI41)/Simulación\ de\ sistemas
-SSO = $(IS41)/Seguridad\ en\ sistemas\ operativos
-SWAP = $(TI32)/Servidores\ web\ de\ altas\ prestaciones
-TDRC = $(TI32)/Transmisión\ de\ datos\ y\ redes\ de\ computadores
-TE = $(IC41)/Tecnologías\ emergentes
-TIC = $(CSI41)/Teoría\ de\ la\ información\ y\ la\ codificación
-TID = $(TI41)/Tratamiento\ de\ imágenes\ digitales
-TOC = $(C12)/Tecnología\ y\ organización\ de\ los\ computadores
-TSI = $(CSI32)/Técnicas\ de\ los\ sistemas\ inteligentes
-TR = $(IC41)/Tecnologías\ de\ red
-TW = $(TI32)/Tecnologías\ web
-VC = $(CSI41)/Visión\ por\ computador
+AA   =  $(CSI32)/Aprendizaje\ automático
+AC   =  $(C22)/Arquitectura\ de\ computadores
+ACAP =  $(CSI32)/Arquitectura\ y\ computación\ de\ altas\ prestaciones
+ADB  =  $(SI32)/Administración\ de\ bases\ de\ datos
+ALEM =  $(C11)/Álgebra\ lineal\ y\ estructuras\ matemáticas
+ALG  =  $(C22)/Algorítmica
+AO   =  $(IS42)/Animación\ por\ ordenador
+AS   =  $(IC32)/Arquitectura\ de\ sistemas
+BDD  =  $(IS41)/Bases\ de\ datos\ distribuidas
+CA   =  $(C11)/Cálculo
+CEGE =  $(FCI)/Creación\ de\ empresas\ y\ gestión\ emprendedora
+CII  =  $(IC42)/Circuitos\ integrados\ e\ impresos
+CPD  =  $(IC41)/Centros\ de\ procesamiento\ de\ datos
+CRIM =  $(TI41)/Compresión\ y\ recuperación\ de\ información\ multimedia
+CRIP =  $(CSI42)/Criptografía\ y\ computación
+CUIA =  $(TI32)/Computación\ ubicua\ e\ inteligencia\ ambiental
+DAI  =  $(TI41)/Desarrollo\ de\ aplicaciones\ para\ internet
+DBA  =  $(IS41)/Desarrollo\ basado\ en\ agentes
+DDSI =  $(C31)/Diseño\ y\ desarrollo\ de\ sistemas\ de\ información
+DGP  =  $(IS41)/Dirección\ y\ gestión\ de\ proyectos
+DHD  =  $(IC32)/Desarrollo\ de\ hardware\ digital
+DI   =  $(FCI)/Derecho\ informático
+DIU  =  $(IS32)/Diseño\ de\ interfaces\ de\ usuario
+DS   =  $(IS32)/Desarrollo\ de\ software
+DSE  =  $(IC32)/Diseño\ de\ sistemas\ electrónicos
+DSD  =  $(IS32)/Desarrollo\ de\ sistemas\ distribuidos
+EC   =  $(C21)/Estructura\ de\ computadores
+ED   =  $(C21)/Estructura\ de\ datos
+EISI =  $(FCI)/Ética,\ informática\ y\ sociedad\ de\ la\ información
+ES   =  $(C12)/Estadística
+GRD  =  $(IS41)/Gestión\ de\ recursos\ digitales
+FBD  =  $(C22)/Fundamentos\ de\ bases\ de\ datos
+FFT  =  $(C11)/Fundamentos\ físicos\ y\ tecnológicos
+FIS  =  $(C22)/Fundamentos\ de\ ingeniería\ del\ software
+FP   =  $(C11)/Fundamentos\ de\ programación
+FR   =  $(C31)/Fundamentos\ de\ redes
+FS   =  $(C11)/Fundamentos\ del\ software
+IA   =  $(C22)/Inteligencia\ artificial
+IC   =  $(CSI32)/Ingeniería\ del\ conocimiento
+IES  =  $(C12)/Ingeniería,\ empresa\ y\ sociedad
+IG   =  $(C31)/Informática\ gráfica
+II   =  $(IC41)/Informátia\ industrial
+IN   =  $(IS41)/Inteligencia\ de\ negocio
+ISE  =  $(C31)/Ingeniería\ de\ servidores
+ISI  =  $(SI32)/Ingeniería\ de\ sistemas\ de\ información
+IV   =  $(TI41)/Infraestructura\ virtual
+LMD  =  $(C12)/Lógica\ y\ métidos\ discretos
+LP   =  $(IS41)/Lógica\ y\ programación
+MC   =  $(C31)/Modelos\ de\ computación
+MCA  =  $(CSI32)/Modelos\ de\ computación\ avanzada
+MDA  =  $(IS41)/Metodologías\ de\ desarrollo\ ágil
+MEI  =  $(IC42)/Mantenimiento\ de\ equipos\ informáticos
+MH   =  $(CSI32)/Metaheurísticas
+MP   =  $(C12)/Metodología\ de\ la\ programación
+NPI  =  $(CSI41)/Nuevos\ paradigmas\ de\ interacción
+NTP  =  $(IS42)/Nuevas\ tecnologías\ de\ la\ programación
+PDIH =  $(SI42)/Periféricos\ y\ dispositivos\ de\ interfaz\ humana
+PDM  =  $(TI42)/Programación\ de\ dispositivos\ móviles
+PDOO =  $(C21)/Programación\ y\ diseño\ orientado\ a\ objetos
+PDS  =  $(TI42)/Procesamiento\ digital\ de\ señales
+PGV  =  $(IS41)/Programación\ gráfica\ de\ videojuegos
+PL   =  $(CSI41)/Procesadores\ de\ lenguajes
+PLD  =  $(CSI42)/Programación\ lúdica
+PPR  =  $(IS42)/Programaciones\ paralelas
+PTC  =  $(CSI41)/Programación\ técnica\ y\ científica
+PW   =  $(SI32)/Programación\ web
+RMS  =  $(TI42)/Redes\ multiservicio
+RI   =  $(CSI42)/Robótica\ industrial
+RINF =  $(IS41)/Recuperación de\ información
+RSC  =  $(IS41)/Redes\ y\ sistemas\ complejos
+SCD  =  $(C21)/Sistemas\ concurrentes\ y\ distribuidos
+SCGC =  $(SI42)/Sistemas\ cooperativos\ y\ gestión\ de\ contenidos
+SE   =  $(IC41)/Sistemas\ empotrados
+SG   =  $(IS32)/Sistemas\ gráficos
+SIBW =  $(IS32)/Sistemas\ de\ información\ basados\ en\ web
+SIE  =  $(SI32)/Sistemas\ de\ información\ para\ empresas
+SIG  =  $(IS41)/Sistemas\ de\ información\ geográficos
+SMD  =  $(SI32)/Sistemas\ multidimensionales
+SMM  =  $(TI32)/Sistemas\ multimedia
+SMP  =  $(IC32)/Sistemas\ con\ microprocesadores
+SO   =  $(C21)/Sistemas\ operativos
+SPSI =  $(TI41)/Seguridad\ y\ protección\ de\ sistemas\ informáticos
+SS   =  $(CSI41)/Simulación\ de\ sistemas
+SSO  =  $(IS41)/Seguridad\ en\ sistemas\ operativos
+SWAP =  $(TI32)/Servidores\ web\ de\ altas\ prestaciones
+TDRC =  $(TI32)/Transmisión\ de\ datos\ y\ redes\ de\ computadores
+TE   =  $(IC41)/Tecnologías\ emergentes
+TIC  =  $(CSI41)/Teoría\ de\ la\ información\ y\ la\ codificación
+TID  =  $(TI41)/Tratamiento\ de\ imágenes\ digitales
+TOC  =  $(C12)/Tecnología\ y\ organización\ de\ los\ computadores
+TSI  =  $(CSI32)/Técnicas\ de\ los\ sistemas\ inteligentes
+TR   =  $(IC41)/Tecnologías\ de\ red
+TW   =  $(TI32)/Tecnologías\ web
+VC   =  $(CSI41)/Visión\ por\ computador
 
  #
   # Directorios out principales
@@ -190,144 +190,145 @@ VC = $(CSI41)/Visión\ por\ computador
 OUT = $(HOME)/Ingenieria-Informatica
 
 # Cuatrimestres
-C11_OUT = $(OUT)/1º\ 1er\ cuatrimestre
-C12_OUT = $(OUT)/1º\ 2º\ cuatrimestre
-C21_OUT = $(OUT)/2º\ 1er\ cuatrimestre
-C22_OUT = $(OUT)/2º\ 2º\ cuatrimestre
-C31_OUT = $(OUT)/3º\ 1er\ cuatrimestre
-C32_OUT = $(OUT)/3º\ 2º\ cuatrimestre
-C41_OUT = $(OUT)/4º\ 1er\ cuatrimestre
-C42_OUT = $(OUT)/4º\ 2º\ cuatrimestre
-FCI_OUT = $(OUT)/Formación\ complementaria\ interdisciplinar
-PE_OUT = $(OUT)/Prácticas\ de\ empresa
-TFG_OUT = $(OUT)/Trabajos\ de\ fin\ de\ grado
+C11_OUT  =  $(OUT)/1º\ 1er\ cuatrimestre
+C12_OUT  =  $(OUT)/1º\ 2º\ cuatrimestre
+C21_OUT  =  $(OUT)/2º\ 1er\ cuatrimestre
+C22_OUT  =  $(OUT)/2º\ 2º\ cuatrimestre
+C31_OUT  =  $(OUT)/3º\ 1er\ cuatrimestre
+C32_OUT  =  $(OUT)/3º\ 2º\ cuatrimestre
+C41_OUT  =  $(OUT)/4º\ 1er\ cuatrimestre
+C42_OUT  =  $(OUT)/4º\ 2º\ cuatrimestre
+FCI_OUT  =  $(OUT)/Formación\ complementaria\ interdisciplinar
+PE_OUT   =  $(OUT)/Prácticas\ de\ empresa
+TFG_OUT  =  $(OUT)/Trabajo\ de\ fin\ de\ grado
 
 # Ramas 3º 2º cuatrimestre
-CSI32_OUT = $(C32_OUT)/Computación\ y\ sistemas\ inteligentes
-IC32_OUT = $(C32_OUT)/Ingeniería\ de\ computadores
-IS32_OUT = $(C32_OUT)/Ingeniería\ del\ software
-SI32_OUT = $(C32_OUT)/Sistemas\ de\ información
-TI32_OUT = $(C32_OUT)/Tecnología\ de\ la\ información
+CSI32_OUT =  $(C32_OUT)/Computación\ y\ sistemas\ inteligentes
+IC32_OUT  =  $(C32_OUT)/Ingeniería\ de\ computadores
+IS32_OUT  =  $(C32_OUT)/Ingeniería\ del\ software
+SI32_OUT  =  $(C32_OUT)/Sistemas\ de\ información
+TI32_OUT  =  $(C32_OUT)/Tecnología\ de\ la\ información
 
 # Ramas 4º 1er cuatrimestre
-CSI41_OUT = $(C41_OUT)/Computación\ y\ sistemas\ inteligentes
-IC41_OUT = $(C41_OUT)/Ingeniería\ de\ computadores
-IS41_OUT = $(C41_OUT)/Ingeniería\ del\ software
-SI41_OUT = $(C41_OUT)/Sistemas\ de\ información
-TI41_OUT = $(C41_OUT)/Tecnología\ de\ la\ información
+CSI41_OUT =  $(C41_OUT)/Computación\ y\ sistemas\ inteligentes
+IC41_OUT  =  $(C41_OUT)/Ingeniería\ de\ computadores
+IS41_OUT  =  $(C41_OUT)/Ingeniería\ del\ software
+SI41_OUT  =  $(C41_OUT)/Sistemas\ de\ información
+TI41_OUT  =  $(C41_OUT)/Tecnología\ de\ la\ información
 
 # Ramas 4º 2º cuatrimestre
 CSI42_OUT = $(C42_OUT)/Computación\ y\ sistemas\ inteligentes
-IC42_OUT = $(C42_OUT)/Ingeniería\ de\ computadores
-IS42_OUT = $(C42_OUT)/Ingeniería\ del\ software
-SI42_OUT = $(C42_OUT)/Sistemas\ de\ información
-TI42_OUT = $(C42_OUT)/Tecnología\ de\ la\ información
+IC42_OUT  =  $(C42_OUT)/Ingeniería\ de\ computadores
+IS42_OUT  =  $(C42_OUT)/Ingeniería\ del\ software
+SI42_OUT  =  $(C42_OUT)/Sistemas\ de\ información
+TI42_OUT  =  $(C42_OUT)/Tecnología\ de\ la\ información
 
  #
   # Directorios out de asignaturas
  #
 
-AA_OUT = $(CSI32_OUT)/Aprendizaje\ automático
-AC_OUT = $(C22_OUT)/Arquitectura\ de\ computadores
-ACAP_OUT = $(CSI32_OUT)/Arquitectura\ y\ computación\ de\ altas\ prestaciones
-ADB_OUT = $(SI32_OUT)/Administración\ de\ bases\ de\ datos
-ALEM_OUT = $(C11_OUT)/Álgebra\ lineal\ y\ estructuras\ matemáticas
-ALG_OUT = $(C22_OUT)/Algorítmica
-AO_OUT = $(IS42_OUT)/Animación\ por\ ordenador
-AS_OUT = $(IC32_OUT)/Arquitectura\ de\ sistemas
-BDD_OUT = $(SI41_OUT)/Bases\ de\ datos\ distribuidas
-CA_OUT = $(C11_OUT)/Cálculo
-CEGE_OUT = $(C4FCI_OUT)/Creación\ de\ empresas\ y\ gestión\ emprendedora
-CII_OUT = $(IC42_OUT)/Circuitos\ integrados\ e\ impresos
-CPD_OUT = $(IC41_OUT)/Centros\ de\ procesamiento\ de\ datos
-CRIM_OUT = $(TI41_OUT)/Compresión\ y\ recuperación\ de\ información\ multimedia
-CRIP_OUT = $(CSI42_OUT)/Criptografía\ y\ computación
-CUIA_OUT = $(TI32_OUT)/Computación\ ubicua\ e\ inteligencia\ ambiental
-DAI_OUT = $(TI41_OUT)/Desarrollo\ de\ aplicaciones\ para\ internet
-DBA_OUT = $(IS41_OUT)/Desarrollo\ basado\ en\ agentes
-DDSI_OUT = $(C31_OUT)/Diseño\ y\ desarrollo\ de\ sistemas\ de\ información
-DGP_OUT = $(IS41_OUT)/Dirección\ y\ gestión\ de\ proyectos
-DHD_OUT = $(IC32_OUT)/Desarrollo\ de\ hardware\ digital
-DI_OUT = $(C4FCI_OUT)/Derecho\ informático
-DIU_OUT = $(IS32_OUT)/Diseño\ de\ interfaces\ de\ usuario
-DS_OUT = $(IS32_OUT)/Desarrollo\ de\ software
-DSE_OUT = $(IC32_OUT)/Diseño\ de\ sistemas\ electrónicos
-DSD_OUT = $(IS32_OUT)/Desarrollo\ de\ sistemas\ distribuidos
-EC_OUT = $(C21_OUT)/Estructura\ de\ computadores
-ED_OUT = $(C21_OUT)/Estructura\ de\ datos
-EISI_OUT = $(C4FCI_OUT)/Ética,\ informática\ y\ sociedad\ de\ la\ información
-ES_OUT = $(C12_OUT)/Estadística
-GRD_OUT = $(SI41_OUT)/Gestión\ de\ recursos\ digitales
-FBD_OUT = $(C22_OUT)/Fundamentos\ de\ bases\ de\ datos
-FFT_OUT = $(C11_OUT)/Fundamentos\ físicos\ y\ tecnológicos
-FIS_OUT = $(C22_OUT)/Fundamentos\ de\ ingeniería\ del\ software
-FP_OUT = $(C11_OUT)/Fundamentos\ de\ programación
-FR_OUT = $(C31_OUT)/Fundamentos\ de\ redes
-FS_OUT = $(C11_OUT)/Fundamentos\ del\ software
-IA_OUT = $(C22_OUT)/Inteligencia\ artificial
-IC_OUT = $(CSI32_OUT)/Ingeniería\ del\ conocimiento
-IES_OUT = $(C12_OUT)/Ingeniería,\ empresa\ y\ sociedad
-IG_OUT = $(C31_OUT)/Informática\ gráfica
-II_OUT = $(IC41_OUT)/Informátia\ industrial
-IN_OUT = $(SI41_OUT)/Inteligencia\ de\ negocio
-ISE_OUT = $(C31_OUT)/Ingeniería\ de\ servidores
-ISI_OUT = $(SI32_OUT)/Ingeniería\ de\ sistemas\ de\ información
-IV_OUT = $(TI41_OUT)/Infraestructura\ virtual
-LMD_OUT = $(C12_OUT)/Lógica\ y\ métidos\ discretos
-LP_OUT = $(IS41_OUT)/Lógica\ y\ programación
-MC_OUT = $(C31_OUT)/Modelos\ de\ computación
-MCA_OUT = $(CSI32_OUT)/Modelos\ de\ computación\ avanzada
-MDA_OUT = $(IS41_OUT)/Metodologías\ de\ desarrollo\ ágil
-MEI_OUT = $(IC42_OUT)/Mantenimiento\ de\ equipos\ informáticos
-MH_OUT = $(CSI32_OUT)/Metaheurísticas
-MP_OUT = $(C12_OUT)/Metodología\ de\ la\ programación
-NPI_OUT = $(CSI41_OUT)/Nuevos\ paradigmas\ de\ interacción
-NTP_OUT = $(IS42_OUT)/Nuevas\ tecnologías\ de\ la\ programación
-PDIH_OUT = $(SI42_OUT)/Periféricos\ y\ dispositivos\ de\ interfaz\ humana
-PDM_OUT = $(TI42_OUT)/Programación\ de\ dispositivos\ móviles
-PDOO_OUT = $(C21_OUT)/Programación\ y\ diseño\ orientado\ a\ objetos
-PDS_OUT = $(TI42_OUT)/Procesamiento\ digital\ de\ señales
-PGV_OUT = $(IS41_OUT)/Programación\ gráfica\ de\ videojuegos
-PL_OUT = $(CSI41_OUT)/Procesadores\ de\ lenguajes
-PLD_OUT = $(CSI42_OUT)/Programación\ lúdica
-PPR_OUT = $(IS42_OUT)/Programaciones\ paralelas
-PTC_OUT = $(CSI41_OUT)/Programación\ técnica\ y\ científica
-PW_OUT = $(SI32_OUT)/Programación\ web
-RMS_OUT = $(TI42_OUT)/Redes\ multiservicio
-RI_OUT = $(CSI42_OUT)/Robótica\ industrial
-RINF_OUT = $(SI41_OUT)/Recuperación\ de\ información
-RSC_OUT = $(SI41_OUT)/Redes\ y\ sistemas\ complejos
-SCD_OUT = $(C21_OUT)/Sistemas\ concurrentes\ y\ distribuidos
-SCGC_OUT = $(SI42_OUT)/Sistemas\ cooperativos\ y\ gestión\ de\ contenidos
-SE_OUT = $(IC41_OUT)/Sistemas\ empotrados
-SG_OUT = $(IS32_OUT)/Sistemas\ gráficos
-SIBW_OUT = $(IS32_OUT)/Sistemas\ de\ información\ basados\ en\ web
-SIE_OUT = $(SI32_OUT)/Sistemas\ de\ información\ para\ empresas
-SIG_OUT = $(SI41_OUT)/Sistemas\ de\ información\ geográficos
-SMD_OUT = $(SI32_OUT)/Sistemas\ multidimensionales
-SMM_OUT = $(TI32_OUT)/Sistemas\ multimedia
-SMP_OUT = $(IC32_OUT)/Sistemas\ con\ microprocesadores
-SO_OUT = $(C21_OUT)/Sistemas\ operativos
-SPSI_OUT = $(TI41_OUT)/Seguridad\ y\ protección\ de\ sistemas\ informáticos
-SS_OUT = $(CSI41_OUT)/Simulación\ de\ sistemas
-SSO_OUT = $(IS41_OUT)/Seguridad\ en\ sistemas\ operativos
-SWAP_OUT = $(TI32_OUT)/Servidores\ web\ de\ altas\ prestaciones
-TDRC_OUT = $(TI32_OUT)/Transmisión\ de\ datos\ y\ redes\ de\ computadores
-TE_OUT = $(IC41_OUT)/Tecnologías\ emergentes
-TIC_OUT = $(CSI41_OUT)/Teoría\ de\ la\ información\ y\ la\ codificación
-TID_OUT = $(TI41_OUT)/Tratamiento\ de\ imágenes\ digitales
-TOC_OUT = $(C12_OUT)/Tecnología\ y\ organización\ de\ los\ computadores
-TSI_OUT = $(CSI32_OUT)/Técnicas\ de\ los\ sistemas\ inteligentes
-TR_OUT = $(IC41_OUT)/Tecnologías\ de\ red
-TW_OUT = $(TI32_OUT)/Tecnologías\ web
-VC_OUT = $(CSI41_OUT)/Visión\ por\ computador
+AA_OUT   =  $(CSI32_OUT)/Aprendizaje\ automático
+AC_OUT   =  $(C22_OUT)/Arquitectura\ de\ computadores
+ACAP_OUT =  $(CSI32_OUT)/Arquitectura\ y\ computación\ de\ altas\ prestaciones
+ADB_OUT  =  $(SI32_OUT)/Administración\ de\ bases\ de\ datos
+ALEM_OUT =  $(C11_OUT)/Álgebra\ lineal\ y\ estructuras\ matemáticas
+ALG_OUT  =  $(C22_OUT)/Algorítmica
+AO_OUT   =  $(IS42_OUT)/Animación\ por\ ordenador
+AS_OUT   =  $(IC32_OUT)/Arquitectura\ de\ sistemas
+BDD_OUT  =  $(SI41_OUT)/Bases\ de\ datos\ distribuidas
+CA_OUT   =  $(C11_OUT)/Cálculo
+CEGE_OUT =  $(FCI_OUT)/Creación\ de\ empresas\ y\ gestión\ emprendedora
+CII_OUT  =  $(IC42_OUT)/Circuitos\ integrados\ e\ impresos
+CPD_OUT  =  $(IC41_OUT)/Centros\ de\ procesamiento\ de\ datos
+CRIM_OUT =  $(TI41_OUT)/Compresión\ y\ recuperación\ de\ información\ multimedia
+CRIP_OUT =  $(CSI42_OUT)/Criptografía\ y\ computación
+CUIA_OUT =  $(TI32_OUT)/Computación\ ubicua\ e\ inteligencia\ ambiental
+DAI_OUT  =  $(TI41_OUT)/Desarrollo\ de\ aplicaciones\ para\ internet
+DBA_OUT  =  $(IS41_OUT)/Desarrollo\ basado\ en\ agentes
+DDSI_OUT =  $(C31_OUT)/Diseño\ y\ desarrollo\ de\ sistemas\ de\ información
+DGP_OUT  =  $(IS41_OUT)/Dirección\ y\ gestión\ de\ proyectos
+DHD_OUT  =  $(IC32_OUT)/Desarrollo\ de\ hardware\ digital
+DI_OUT   =  $(FCI_OUT)/Derecho\ informático
+DIU_OUT  =  $(IS32_OUT)/Diseño\ de\ interfaces\ de\ usuario
+DS_OUT   =  $(IS32_OUT)/Desarrollo\ de\ software
+DSE_OUT  =  $(IC32_OUT)/Diseño\ de\ sistemas\ electrónicos
+DSD_OUT  =  $(IS32_OUT)/Desarrollo\ de\ sistemas\ distribuidos
+EC_OUT   =  $(C21_OUT)/Estructura\ de\ computadores
+ED_OUT   =  $(C21_OUT)/Estructura\ de\ datos
+EISI_OUT =  $(FCI_OUT)/Ética,\ informática\ y\ sociedad\ de\ la\ información
+ES_OUT   =  $(C12_OUT)/Estadística
+GRD_OUT  =  $(SI41_OUT)/Gestión\ de\ recursos\ digitales
+FBD_OUT  =  $(C22_OUT)/Fundamentos\ de\ bases\ de\ datos
+FFT_OUT  =  $(C11_OUT)/Fundamentos\ físicos\ y\ tecnológicos
+FIS_OUT  =  $(C22_OUT)/Fundamentos\ de\ ingeniería\ del\ software
+FP_OUT   =  $(C11_OUT)/Fundamentos\ de\ programación
+FR_OUT   =  $(C31_OUT)/Fundamentos\ de\ redes
+FS_OUT   =  $(C11_OUT)/Fundamentos\ del\ software
+IA_OUT   =  $(C22_OUT)/Inteligencia\ artificial
+IC_OUT   =  $(CSI32_OUT)/Ingeniería\ del\ conocimiento
+IES_OUT  =  $(C12_OUT)/Ingeniería,\ empresa\ y\ sociedad
+IG_OUT   =  $(C31_OUT)/Informática\ gráfica
+II_OUT   =  $(IC41_OUT)/Informátia\ industrial
+IN_OUT   =  $(SI41_OUT)/Inteligencia\ de\ negocio
+ISE_OUT  =  $(C31_OUT)/Ingeniería\ de\ servidores
+ISI_OUT  =  $(SI32_OUT)/Ingeniería\ de\ sistemas\ de\ información
+IV_OUT   =  $(TI41_OUT)/Infraestructura\ virtual
+LMD_OUT  =  $(C12_OUT)/Lógica\ y\ métidos\ discretos
+LP_OUT   =  $(IS41_OUT)/Lógica\ y\ programación
+MC_OUT   =  $(C31_OUT)/Modelos\ de\ computación
+MCA_OUT  =  $(CSI32_OUT)/Modelos\ de\ computación\ avanzada
+MDA_OUT  =  $(IS41_OUT)/Metodologías\ de\ desarrollo\ ágil
+MEI_OUT  =  $(IC42_OUT)/Mantenimiento\ de\ equipos\ informáticos
+MH_OUT   =  $(CSI32_OUT)/Metaheurísticas
+MP_OUT   =  $(C12_OUT)/Metodología\ de\ la\ programación
+NPI_OUT  =  $(CSI41_OUT)/Nuevos\ paradigmas\ de\ interacción
+NTP_OUT  =  $(IS42_OUT)/Nuevas\ tecnologías\ de\ la\ programación
+PDIH_OUT =  $(SI42_OUT)/Periféricos\ y\ dispositivos\ de\ interfaz\ humana
+PDM_OUT  =  $(TI42_OUT)/Programación\ de\ dispositivos\ móviles
+PDOO_OUT =  $(C21_OUT)/Programación\ y\ diseño\ orientado\ a\ objetos
+PDS_OUT  =  $(TI42_OUT)/Procesamiento\ digital\ de\ señales
+PGV_OUT  =  $(IS41_OUT)/Programación\ gráfica\ de\ videojuegos
+PL_OUT   =  $(CSI41_OUT)/Procesadores\ de\ lenguajes
+PLD_OUT  =  $(CSI42_OUT)/Programación\ lúdica
+PPR_OUT  =  $(IS42_OUT)/Programaciones\ paralelas
+PTC_OUT  =  $(CSI41_OUT)/Programación\ técnica\ y\ científica
+PW_OUT   =  $(SI32_OUT)/Programación\ web
+RMS_OUT  =  $(TI42_OUT)/Redes\ multiservicio
+RI_OUT   =  $(CSI42_OUT)/Robótica\ industrial
+RINF_OUT =  $(SI41_OUT)/Recuperación\ de\ información
+RSC_OUT  =  $(SI41_OUT)/Redes\ y\ sistemas\ complejos
+SCD_OUT  =  $(C21_OUT)/Sistemas\ concurrentes\ y\ distribuidos
+SCGC_OUT =  $(SI42_OUT)/Sistemas\ cooperativos\ y\ gestión\ de\ contenidos
+SE_OUT   =  $(IC41_OUT)/Sistemas\ empotrados
+SG_OUT   =  $(IS32_OUT)/Sistemas\ gráficos
+SIBW_OUT =  $(IS32_OUT)/Sistemas\ de\ información\ basados\ en\ web
+SIE_OUT  =  $(SI32_OUT)/Sistemas\ de\ información\ para\ empresas
+SIG_OUT  =  $(SI41_OUT)/Sistemas\ de\ información\ geográficos
+SMD_OUT  =  $(SI32_OUT)/Sistemas\ multidimensionales
+SMM_OUT  =  $(TI32_OUT)/Sistemas\ multimedia
+SMP_OUT  =  $(IC32_OUT)/Sistemas\ con\ microprocesadores
+SO_OUT   =  $(C21_OUT)/Sistemas\ operativos
+SPSI_OUT =  $(TI41_OUT)/Seguridad\ y\ protección\ de\ sistemas\ informáticos
+SS_OUT   =  $(CSI41_OUT)/Simulación\ de\ sistemas
+SSO_OUT  =  $(IS41_OUT)/Seguridad\ en\ sistemas\ operativos
+SWAP_OUT =  $(TI32_OUT)/Servidores\ web\ de\ altas\ prestaciones
+TDRC_OUT =  $(TI32_OUT)/Transmisión\ de\ datos\ y\ redes\ de\ computadores
+TE_OUT   =  $(IC41_OUT)/Tecnologías\ emergentes
+TIC_OUT  =  $(CSI41_OUT)/Teoría\ de\ la\ información\ y\ la\ codificación
+TID_OUT  =  $(TI41_OUT)/Tratamiento\ de\ imágenes\ digitales
+TOC_OUT  =  $(C12_OUT)/Tecnología\ y\ organización\ de\ los\ computadores
+TSI_OUT  =  $(CSI32_OUT)/Técnicas\ de\ los\ sistemas\ inteligentes
+TR_OUT   =  $(IC41_OUT)/Tecnologías\ de\ red
+TW_OUT   =  $(TI32_OUT)/Tecnologías\ web
+VC_OUT   =  $(CSI41_OUT)/Visión\ por\ computador
 
  #
   # Otros directorios
  #
 
-PLANTILLAS = $(HOME)/.plantillas
-
+# Directorios de recursos para make
+MAKEDIR = $(HOME)/.make
+EISVOGEL = $(MAKEDIR)/eisvogel
 
   # FUNCIONES SOBRE INSTRUCCIONES MAKE
   #
@@ -337,36 +338,46 @@ PLANTILLAS = $(HOME)/.plantillas
 
 # Creación de directorios
 #  $(1) -> Nombre del directorio, se imprime en pantalla
-#  $(2) -> Macro de ruta del directorio a crear
+#  $(2) -> Ruta del directorio a crear (con macros)
 define creadir
-	@printf "Creando directorio %s\n" $(1)
+	@printf "\033[1;32mCreando directorio\033[0m %s\n" $(1)
 	@mkdir $(2)
 endef
 
 # Creación de directorios que no contienen órdenes make
 #  $(1) -> Nombre del directorio, se imprime en pantalla
-#  $(2) -> Macro de ruta del directorio a crear
+#  $(2) -> Ruta del directorio a crear (con macros)
 define creadirv
-	@awk 'BEGIN{printf "Creando directorio %-55s ¡VACÍO!\n", $(1)}'
+	@awk 'BEGIN{printf "\033[1;32mCreando directorio\033[0m %-55s \033[1;31m¡VACÍO!\033[0m\n", $(1)}'
 	@mkdir $(2)
 endef
 
 # Compilación de ficheros Markdown a pdf mediante pandoc
-#  $(1) -> Nombre del fichero de salida, se imprime en pantalla
-#  $(2) -> Macro de ruta del fichero de origen
-#  $(3) -> Macro de ruta del fichero de salida
+#  $(1) -> Nombre del fichero de salida (entrecomillado)
+#  $(2) -> Ruta del directorio en el que se encuentran los ficheros de origen
+#          (con macros)
+#  $(3) -> Ruta del fichero de salida (con macros)
 define md-pdf
-	@printf "Compilando %s.pdf" $(1)
-	@(sleep 1; printf ".")&
-	@(sleep 2; printf ".")&
-	@(sleep 3; printf ".")&
+	@printf " \033[1;33m- \033[35mCreando\033[0m    %s.md...\n" $(1)
+		@cp $(2)/.yaml $(2)/$(strip $(1))
+	@for file in $(2)/*.md;\
+	 do\
+	 cat "$$file";\
+	 printf "\n\n\\pagebreak\n\n";\
+	 done >> $(2)/$(strip $(1))
+	@mv $(2)/$(strip $(1)) $(2)/$(strip $(1)).md
+	@printf " \033[1;33m- \033[34mCompilando\033[0m %s.pdf..." $(1)
 	@pandoc --standalone\
-          --template=$(PLANTILLAS)/eisvogel/eisvogel.tex\
-          --from markdown\
-          --pdf-engine=xelatex\
-          $(2) -o $(3)
-	@printf "\n"
+	        --template=$(EISVOGEL)/eisvogel.tex\
+	        --resource-path=$(strip $(2))\
+	        --from markdown+implicit_figures\
+	        --pdf-engine=xelatex\
+	        --listings\
+	        $(2)/$(strip $(1)).md -o $(3)/$(strip $(1)).pdf
+	@printf "\n \033[1;33m- Eliminando\033[0m %s.md...\n" $(strip $(1))
+	@rm $(2)/$(strip $(1)).md
 endef
+
 
   # INSTRUCCIONES MAKE
   #
@@ -374,25 +385,24 @@ endef
   #     - ALL -> Rama principal. De ella parten todos los cuatrimestres.
   #     - CUATRIMESTRES -> Contienen las asignaturas de cada uno de ellos.
   #     - ASIGNATURAS -> Contienen las instrucciones de compilación.
-  #     - MAIN -> Creación de directorios.
+  #     - MAIN -> Inicialización de cada sección.
   #
   #    Los ficheros de texto deben compilarse siempre y cuando no sean los
   #    README de cada una de las ramas. Estos están diseñados para verse
-	#    en GitHub, no para ser compilados en Pandoc.
+  #    en GitHub, no para ser compilados en Pandoc.
 
-ALL: MAIN_ALL C11 C12 C21 C22 C31 C32 C41 C42 PE TFG FIN
+ALL: MAIN_ALL C11 C12 C21 C22 C31 C32 C41 C42 FCI PE TFG FIN
 
 MAIN_ALL:
-	@echo
-	@echo    "   =========================="
-	@echo    "   # COMENZANDO COMPILACIÓN #"
-	@echo    "   =========================="
-	@echo
-	@echo    "Eliminando compilación anterior"
+	@printf    "\n   \033[1;34m=================================================\n"
+	@printf      "   #                                               #\n"
+	@printf      "   #  \033[1;33mC O M E N Z A N D O   C O M P I L A C I Ó N  \033[1;34m#\n"
+	@printf      "   #                                               #\n"
+	@printf      "   =================================================\033[0m\n"
+	@printf    "\nEliminando compilación anterior\n"
 	@rm -rf  $(OUT)
-	@echo    "Creando raíz de archivos compilados"
+	@printf    "Creando raíz de archivos compilados\n\n"
 	@mkdir   $(OUT)
-	@echo
 
  #
   # 1º 1er cuatrimestre
@@ -445,7 +455,7 @@ MAIN_ES:
 IES: MAIN_IES
 
 MAIN_IES:
-	$(call creadirv, "Ingeniería empresa y sociedad", $(IES_OUT))
+	$(call creadirv, ("Ingeniería, empresa y sociedad"), $(IES_OUT))
 
 LMD: MAIN_LMD
 
@@ -1073,7 +1083,7 @@ MAIN_DI:
 EISI: MAIN_EISI
 
 MAIN_EISI:
-	$(call creadirv, "Ética informática y sociedad de la información", $(EISI_OUT))
+	$(call creadirv, ("Ética, informática y sociedad de la información"), $(EISI_OUT))
 
  #
   # Prácticas de empresa
@@ -1082,7 +1092,7 @@ MAIN_EISI:
 PE: MAIN_PE
 
 MAIN_PE:
-	$(call creadir, "Prácticas de empresa", $(PE_OUT))
+	$(call creadirv, "Prácticas de empresa", $(PE_OUT))
 
  #
   # Trabajos de fin de grado
@@ -1091,7 +1101,7 @@ MAIN_PE:
 TFG: MAIN_TFG
 
 MAIN_TFG:
-	$(call creadir, "Trabajo de fin de grado", $(TFG_OUT))
+	$(call creadirv, "Trabajo de fin de grado", $(TFG_OUT))
 
  #
   # Mensaje de despedida
@@ -1099,17 +1109,16 @@ MAIN_TFG:
 
 FIN:
 	@rm -rf $(HOME)/.cache
-	@echo
-	@echo "   ================================================================"
-	@echo "   #                                                              #"
-	@echo "   #               COMPILACIÓN COMPLETADA CON ÉXITO               #"
-	@echo "   #                                                              #"
-	@echo "   # Este repositorio es fruto del esfuerzo de los estudiantes de #"
-	@echo "   # la Universidad de Granada     - MÁS INFO: deiit.ugr.es -     #"
-	@echo "   #                                                              #"
-	@echo "   ================================================================"
-	@echo "               _____     ______     __     __     ______           "
-	@echo "              /\  __-.  /\  ___\   /\ \   /\ \   /\__  _\          "
-	@echo "              \ \ \/\ \ \ \  __\   \ \ \  \ \ \  \/_/\ \/          "
-	@echo "               \ \____-  \ \_____\  \ \_\  \ \_\    \ \_\          "
-	@echo "                \/____/   \/_____/   \/_/   \/_/     \/_/          "
+	@printf "\n   \033[1;34m================================================================\n"
+	@printf "   #                                                              #\n"
+	@printf "   #               \033[1;32mCOMPILACIÓN COMPLETADA CON ÉXITO               \033[1;34m#\n"
+	@printf "   #                                                              #\n"
+	@printf "   # \033[1;33mEste repositorio es fruto del esfuerzo de los estudiantes de \033[1;34m#\n"
+	@printf "   # \033[1;33mla Universidad de Granada     - MÁS INFO: \033[1;32mdeiit.ugr.es \033[1;33m-     \033[1;34m#\n"
+	@printf "   \033[1;34m#                                                              #\n"
+	@printf "   \033[1;34m================================================================\n"
+	@printf "               \033[1;36m_____     ______     __     __     ______           \n"
+	@printf "              /\  __-.  /\  ___\   /\ \   /\ \   /\__  _\          \n"
+	@printf "              \ \ \/\ \ \ \  __\   \ \ \  \ \ \  \/_/\ \/          \n"
+	@printf "               \ \____-  \ \_____\  \ \_\  \ \_\    \ \_\          \n"
+	@printf "                \/____/   \/_____/   \/_/   \/_/     \/_/          \n"

@@ -1,0 +1,11 @@
+---
+title: "ASIGNATURA - CONTENIDOS"
+subtitle: "Ingeniería Informática - Universidad de Granada"
+author: [https://github.com/DEIIT/Ingenieria-Informatica]
+date: \today
+keywords: [UGR, DEIIT, Apuntes, Ingeniería informática]
+titlepage: true
+titlepage-rule-color: 272d2d
+logo: ".make/deiithorizontal.png"
+lang: "es"
+...
