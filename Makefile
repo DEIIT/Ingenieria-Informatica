@@ -1068,7 +1068,7 @@ MAIN_RMS:
 FCI: MAIN_FCI CEGE DI EISI
 
 MAIN_FCI:
-	$(call creadir, "Formación complementaria interdisciplianr", $(FCI_OUT))
+	$(call creadir, "Formación complementaria interdisciplinar", $(FCI_OUT))
 
 CEGE: MAIN_CEGE
 
