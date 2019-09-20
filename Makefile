@@ -395,7 +395,7 @@ endef
 
 ALL: INIT_ALL C11 C12 C21 C22 C31 C32 C41 C42 FCI PE TFG FIN
 
- #
+ 
   # Mensaje y preparaciones iniciales de compilación
  #
 
@@ -414,672 +414,672 @@ INIT_ALL:
   # 1º 1er cuatrimestre
  #
 
-C11: MAIN_C11 ALEM CA FFT FP FS
-MAIN_C11:
+C11: INIT_C11 ALEM CA FFT FP FS
+INIT_C11:
 	$(call creadir, "1º 1er cuatrimestre", $(C11_OUT))
 
 
-ALEM: MAIN_ALEM
-MAIN_ALEM:
+ALEM: INIT_ALEM
+INIT_ALEM:
 	$(call creadirv, "Álgebra lineal y estructuras matemáticas", $(ALEM_OUT))
 
-CA: MAIN_CA
-MAIN_CA:
+CA: INIT_CA
+INIT_CA:
 	$(call creadirv, "Cálculo", $(CA_OUT))
 
 
-FFT: MAIN_FFT
-MAIN_FFT:
+FFT: INIT_FFT
+INIT_FFT:
 	$(call creadirv, "Fundamentos físicos y tecnológicos", $(FFT_OUT))
 
 
-FP: MAIN_FP
-MAIN_FP:
+FP: INIT_FP
+INIT_FP:
 	$(call creadirv, "Fundamentos de programación", $(FP_OUT))
 
 
-FS: MAIN_FS
-MAIN_FS:
+FS: INIT_FS
+INIT_FS:
 	$(call creadirv, "Fundamentos del software", $(FS_OUT))
 
  #
   # 1º 2º cuatrimestre
  #
 
-C12: MAIN_C12 ES IES LMD MP TOC
-MAIN_C12:
+C12: INIT_C12 ES IES LMD MP TOC
+INIT_C12:
 	$(call creadir, "1º 2º cuatrimestre", $(C12_OUT))
 
 
-ES: MAIN_ES
-MAIN_ES:
+ES: INIT_ES
+INIT_ES:
 	$(call creadirv, "Estadística", $(ES_OUT))
 
 
-IES: MAIN_IES
-MAIN_IES:
+IES: INIT_IES
+INIT_IES:
 	$(call creadirv, ("Ingeniería, empresa y sociedad"), $(IES_OUT))
 
 
-LMD: MAIN_LMD
-MAIN_LMD:
+LMD: INIT_LMD
+INIT_LMD:
 	$(call creadirv, "Lógica y métodos discretos", $(LMD_OUT))
 
 
-MP: MAIN_MP
-MAIN_MP:
+MP: INIT_MP
+INIT_MP:
 	$(call creadirv, "Metodología de la programación", $(MP_OUT))
 
 
-TOC: MAIN_TOC
-MAIN_TOC:
+TOC: INIT_TOC
+INIT_TOC:
 	$(call creadirv, "Tecnología y organización de los computadores", $(TOC_OUT))
 
  #
   # 2º 1er cuatrimestre
  #
 
-C21: MAIN_C21 EC ED PDOO SCD SO
-MAIN_C21:
+C21: INIT_C21 EC ED PDOO SCD SO
+INIT_C21:
 	$(call creadir, "2º 1er cuatrimestre", $(C21_OUT))
 
 
-EC: MAIN_EC
-MAIN_EC:
+EC: INIT_EC
+INIT_EC:
 	$(call creadirv, "Estructura de computadores", $(EC_OUT))
 
 
-ED: MAIN_ED
-MAIN_ED:
+ED: INIT_ED
+INIT_ED:
 	$(call creadirv, "Estructura de datos", $(ED_OUT))
 
 
-PDOO: MAIN_PDOO
-MAIN_PDOO:
+PDOO: INIT_PDOO
+INIT_PDOO:
 	$(call creadirv, "Programación y diseño orientado a objetos", $(PDOO_OUT))
 
 
-SCD: MAIN_SCD
-MAIN_SCD:
+SCD: INIT_SCD
+INIT_SCD:
 	$(call creadirv, "Sistemas concurrentes y distribuidos", $(SCD_OUT))
 
 
-SO: MAIN_SO
-MAIN_SO:
+SO: INIT_SO
+INIT_SO:
 	$(call creadirv, "Sistemas operativos", $(SO_OUT))
 
  #
   # 2º 2º cuatrimestre
  #
 
-C22: MAIN_C22 AC ALG FBD FIS IA
-MAIN_C22:
+C22: INIT_C22 AC ALG FBD FIS IA
+INIT_C22:
 	$(call creadir, "2º 2º cuatrimestre", $(C22_OUT))
 
 
-AC: MAIN_AC
-MAIN_AC:
+AC: INIT_AC
+INIT_AC:
 	$(call creadirv, "Arquitectura de computadores", $(AC_OUT))
 
 
-ALG: MAIN_ALG
-MAIN_ALG:
+ALG: INIT_ALG
+INIT_ALG:
 	$(call creadirv, "Algorítmica", $(ALG_OUT))
 
 
-FBD: MAIN_FBD
-MAIN_FBD:
+FBD: INIT_FBD
+INIT_FBD:
 	$(call creadirv, "Fundamentos de bases de datos", $(FBD_OUT))
 
 
-FIS: MAIN_FIS
-MAIN_FIS:
+FIS: INIT_FIS
+INIT_FIS:
 	$(call creadirv, "Fundamentos de ingeniería del software", $(FIS_OUT))
 
 
-IA: MAIN_IA
-MAIN_IA:
+IA: INIT_IA
+INIT_IA:
 	$(call creadirv, "Inteligencia artificial", $(IA_OUT))
 
  #
   # 3º 1er cuatrimestre
  #
 
-C31: MAIN_C31 DDSI FR IG ISE MC
-MAIN_C31:
+C31: INIT_C31 DDSI FR IG ISE MC
+INIT_C31:
 	$(call creadir, "3º 1er cuatrimestre", $(C31_OUT))
 
 
-DDSI: MAIN_DDSI
-MAIN_DDSI:
+DDSI: INIT_DDSI
+INIT_DDSI:
 	$(call creadirv, "Diseño y desarrollo de sistemas de información", $(DDSI_OUT))
 
 
-FR: MAIN_FR
-MAIN_FR:
+FR: INIT_FR
+INIT_FR:
 	$(call creadirv, "Fundamentos de redes", $(FR_OUT))
 
 
-IG: MAIN_IG
-MAIN_IG:
+IG: INIT_IG
+INIT_IG:
 	$(call creadirv, "Informática gráfica", $(IG_OUT))
 
 
-ISE: MAIN_ISE
-MAIN_ISE:
+ISE: INIT_ISE
+INIT_ISE:
 	$(call creadirv, "Ingeniería de servidores", $(ISE_OUT))
 
 
-MC: MAIN_MC
-MAIN_MC:
+MC: INIT_MC
+INIT_MC:
 	$(call creadirv, "Modelos de computación", $(MC_OUT))
 
  #
   # 3º 2º cuatrimestre
  #
 
-C32: MAIN_C32 CSI32 IC32 IS32 SI32 TI32
-MAIN_C32:
+C32: INIT_C32 CSI32 IC32 IS32 SI32 TI32
+INIT_C32:
 	$(call creadir, "3º 2º cuatrimestre", $(C32_OUT))
 
  #
   # Computación y sistemas inteligentes - 3º 2º cuatrimestre
  #
 
-CSI32: MAIN_CSI32 AA IC MCA MH TSI
-MAIN_CSI32:
+CSI32: INIT_CSI32 AA IC MCA MH TSI
+INIT_CSI32:
 	$(call creadir, "3º 2º - Computación y sistemas inteligentes", $(CSI32_OUT))
 
 
-AA: MAIN_AA
-MAIN_AA:
+AA: INIT_AA
+INIT_AA:
 	$(call creadirv, "Aprendizaje automático", $(AA_OUT))
 
 
-IC: MAIN_IC
-MAIN_IC:
+IC: INIT_IC
+INIT_IC:
 	$(call creadirv, "Ingeniería del conocimiento", $(IC_OUT))
 
 
-MCA: MAIN_MCA
-MAIN_MCA:
+MCA: INIT_MCA
+INIT_MCA:
 	$(call creadirv, "Modelos de computación avanzada", $(MCA_OUT))
 
 
-MH: MAIN_MH
-MAIN_MH:
+MH: INIT_MH
+INIT_MH:
 	$(call creadirv, "Metaheurísticas", $(MH_OUT))
 
 
-TSI: MAIN_TSI
-MAIN_TSI:
+TSI: INIT_TSI
+INIT_TSI:
 	$(call creadirv, "Técnicas de los sistemas inteligentes", $(TSI_OUT))
 
  #
   # Ingeniería de computadores - 3º 2º cuatrimestre
  #
 
-IC32: MAIN_IC32 ACAP AS DHD DSE SMP
-MAIN_IC32:
+IC32: INIT_IC32 ACAP AS DHD DSE SMP
+INIT_IC32:
 	$(call creadir, "3º 2º - Ingeniería de computadores", $(IC32_OUT))
 
 
-ACAP: MAIN_ACAP
-MAIN_ACAP:
+ACAP: INIT_ACAP
+INIT_ACAP:
 	$(call creadirv, "Arquitectura y computación de altas prestaciones", $(ACAP_OUT))
 
 
-AS: MAIN_AS
-MAIN_AS:
+AS: INIT_AS
+INIT_AS:
 	$(call creadirv, "Arquitectura de sistemas", $(AS_OUT))
 
 
-DHD: MAIN_DHD
-MAIN_DHD:
+DHD: INIT_DHD
+INIT_DHD:
 	$(call creadirv, "Desarrollo de hardware digital", $(DHD_OUT))
 
 
-DSE: MAIN_DSE
-MAIN_DSE:
+DSE: INIT_DSE
+INIT_DSE:
 	$(call creadirv, "Diseño de sistemas electrónicos", $(DSE_OUT))
 
 
-SMP: MAIN_SMP
-MAIN_SMP:
+SMP: INIT_SMP
+INIT_SMP:
 	$(call creadirv, "Sistemas con microprocesadores", $(SMP_OUT))
 
  #
   # Ingeniería del software - 3º 2º cuatrimestre
  #
 
-IS32: MAIN_IS32 DIU DS DSD SG SIBW
-MAIN_IS32:
+IS32: INIT_IS32 DIU DS DSD SG SIBW
+INIT_IS32:
 	$(call creadir, "3º 2º - Ingeniería del software", $(IS32_OUT))
 
 
-DIU: MAIN_DIU
-MAIN_DIU:
+DIU: INIT_DIU
+INIT_DIU:
 	$(call creadirv, "Diseño de interfaces de usuario", $(DIU_OUT))
 
 
-DS: MAIN_DS
-MAIN_DS:
+DS: INIT_DS
+INIT_DS:
 	$(call creadirv, "Desarrollo de software", $(DS_OUT))
 
 
-DSD: MAIN_DSD
-MAIN_DSD:
+DSD: INIT_DSD
+INIT_DSD:
 	$(call creadirv, "Desarrollo de sistemas distribuidos", $(DSD_OUT))
 
 
-SG: MAIN_SG
-MAIN_SG:
+SG: INIT_SG
+INIT_SG:
 	$(call creadirv, "Sistemas gráficos", $(SG_OUT))
 
 
-SIBW: MAIN_SIBW
-MAIN_SIBW:
+SIBW: INIT_SIBW
+INIT_SIBW:
 	$(call creadirv, "Sistemas de información basados en web", $(SIBW_OUT))
 
  #
   # Sistemas de información - 3º 2º cuatrimestre
  #
 
-SI32: MAIN_SI32 ABD ISI PW SIE SMD
-MAIN_SI32:
+SI32: INIT_SI32 ABD ISI PW SIE SMD
+INIT_SI32:
 	$(call creadir, "3º 2º - Sistemas de información", $(SI32_OUT))
 
 
-ABD: MAIN_ADB
-MAIN_ADB:
+ABD: INIT_ADB
+INIT_ADB:
 	$(call creadirv, "Administración de bases de datos", $(ADB_OUT))
 
 
-ISI: MAIN_ISI
-MAIN_ISI:
+ISI: INIT_ISI
+INIT_ISI:
 	$(call creadirv, "Ingeniería de sistemas de información", $(ISI_OUT))
 
 
-PW: MAIN_PW
-MAIN_PW:
+PW: INIT_PW
+INIT_PW:
 	$(call creadirv, "Programación web", $(PW_OUT))
 
 
-SIE: MAIN_SIE
-MAIN_SIE:
+SIE: INIT_SIE
+INIT_SIE:
 	$(call creadirv, "Sistemas de información para empresas", $(SIE_OUT))
 
 
-SMD: MAIN_SMD
-MAIN_SMD:
+SMD: INIT_SMD
+INIT_SMD:
 	$(call creadirv, "Sistemas multidimensionales", $(SMD_OUT))
 
  #
   # Tecnologías de la información - 3º 2º cuatrimestre
  #
 
-TI32: MAIN_TI32 CUIA SMM SWAP TDRC TW
-MAIN_TI32:
+TI32: INIT_TI32 CUIA SMM SWAP TDRC TW
+INIT_TI32:
 	$(call creadir, "3º 2º - Tecnologías de la información", $(TI32_OUT))
 
 
-CUIA: MAIN_CUIA
-MAIN_CUIA:
+CUIA: INIT_CUIA
+INIT_CUIA:
 	$(call creadirv, "Computación ubicua e inteligencia artificial", $(CUIA_OUT))
 
 
-SMM: MAIN_SMM
-MAIN_SMM:
+SMM: INIT_SMM
+INIT_SMM:
 	$(call creadirv, "Sistemas multimedia", $(SMM_OUT))
 
 
-SWAP: MAIN_SWAP
-MAIN_SWAP:
+SWAP: INIT_SWAP
+INIT_SWAP:
 	$(call creadirv, "Servidores web de altas prestaciones", $(SWAP_OUT))
 
 
-TDRC: MAIN_TDRC
-MAIN_TDRC:
+TDRC: INIT_TDRC
+INIT_TDRC:
 	$(call creadirv, "Transmisión de datos y redes de computadores", $(TDRC_OUT))
 
 
-TW: MAIN_TW
-MAIN_TW:
+TW: INIT_TW
+INIT_TW:
 	$(call creadirv, "Tecnologías web", $(TW_OUT))
 
  #
   # 4º 1er cuatrimestre
  #
 
-C41: MAIN_C41 CSI41 IC41 IS41 SI41 TI41
-MAIN_C41:
+C41: INIT_C41 CSI41 IC41 IS41 SI41 TI41
+INIT_C41:
 	$(call creadir, "4º 1er cuatrimestre", $(C41_OUT))
 
  #
   # Computación y sistemas inteligentes - 4º 1er cuatrimestre
  #
 
-CSI41: MAIN_CSI41 NPI PL PTC SS TIC VC
-MAIN_CSI41:
+CSI41: INIT_CSI41 NPI PL PTC SS TIC VC
+INIT_CSI41:
 	$(call creadir, "4º 1er - Computación y sistemas inteligentes", $(CSI41_OUT))
 
 
-NPI: MAIN_NPI
-MAIN_NPI:
+NPI: INIT_NPI
+INIT_NPI:
 	$(call creadirv, "Nuevos paradigmas de interacción", $(NPI_OUT))
 
 
-PL: MAIN_PL
-MAIN_PL:
+PL: INIT_PL
+INIT_PL:
 	$(call creadirv, "Procesadores de lenguajes", $(PL_OUT))
 
 
-PTC: MAIN_PTC
-MAIN_PTC:
+PTC: INIT_PTC
+INIT_PTC:
 	$(call creadirv, "Programación técnica y científica", $(PTC_OUT))
 
 
-SS: MAIN_SS
-MAIN_SS:
+SS: INIT_SS
+INIT_SS:
 	$(call creadirv, "Simulación de sistemas", $(SS_OUT))
 
 
-TIC: MAIN_TIC
-MAIN_TIC:
+TIC: INIT_TIC
+INIT_TIC:
 	$(call creadirv, "Teoría de la información y la codificación", $(TIC_OUT))
 
 
-VC: MAIN_VC
-MAIN_VC:
+VC: INIT_VC
+INIT_VC:
 	$(call creadirv, "Visión por computador", $(VC_OUT))
 
  #
   # Ingeniería de computadores - 4º 1er cuatrimestre
  #
 
-IC41: MAIN_IC41 CPD II SE TE TR
-MAIN_IC41:
+IC41: INIT_IC41 CPD II SE TE TR
+INIT_IC41:
 	$(call creadir, "4º 1er - Ingeniería de computadores", $(IC41_OUT))
 
 
-CPD: MAIN_CPD
-MAIN_CPD:
+CPD: INIT_CPD
+INIT_CPD:
 	$(call creadirv, "Centros de procesamiento de datos", $(CPD_OUT))
 
 
-II: MAIN_II
-MAIN_II:
+II: INIT_II
+INIT_II:
 	$(call creadirv, "Informática industrial", $(II_OUT))
 
 
-SE: MAIN_SE
-MAIN_SE:
+SE: INIT_SE
+INIT_SE:
 	$(call creadirv, "Sistemas empotrados", $(SE_OUT))
 
 
-TE: MAIN_TE
-MAIN_TE:
+TE: INIT_TE
+INIT_TE:
 	$(call creadirv, "Tecnologías emergentes", $(TE_OUT))
 
 
-TR: MAIN_TR
-MAIN_TR:
+TR: INIT_TR
+INIT_TR:
 	$(call creadirv, "Tecnologías de red", $(TR_OUT))
 
  #
   # Ingeniería del software - 4º 1er cuatrimestre
  #
 
-IS41: MAIN_IS41 DBA DGP LP MDA PGV
-MAIN_IS41:
+IS41: INIT_IS41 DBA DGP LP MDA PGV
+INIT_IS41:
 	$(call creadir, "4º 1er - Ingeniería del software", $(IS41_OUT))
 
 
-DBA: MAIN_DBA
-MAIN_DBA:
+DBA: INIT_DBA
+INIT_DBA:
 	$(call creadirv, "Desarrollo basado en agentes", $(DBA_OUT))
 
 
-DGP: MAIN_DGP
-MAIN_DGP:
+DGP: INIT_DGP
+INIT_DGP:
 	$(call creadirv, "Dirección y gestión de proyectos", $(DGP_OUT))
 
 
-LP: MAIN_LP
-MAIN_LP:
+LP: INIT_LP
+INIT_LP:
 	$(call creadirv, "Lógica y programación", $(LP_OUT))
 
 
-MDA: MAIN_MDA
-MAIN_MDA:
+MDA: INIT_MDA
+INIT_MDA:
 	$(call creadirv, "Metodologías de desarrollo ágil", $(MDA_OUT))
 
 
-PGV: MAIN_PGV
-MAIN_PGV:
+PGV: INIT_PGV
+INIT_PGV:
 	$(call creadirv, "Programación gráfica de videojuegos", $(PGV_OUT))
 
  #
   # Sistemas de información - 4º 1er cuatrimestre
  #
 
-SI41: MAIN_SI41 BDD GRD IN RINF RSC SIG
-MAIN_SI41:
+SI41: INIT_SI41 BDD GRD IN RINF RSC SIG
+INIT_SI41:
 	$(call creadir, "4º 1er - Sistemas de información", $(SI41_OUT))
 
 
-BDD: MAIN_BDD
-MAIN_BDD:
+BDD: INIT_BDD
+INIT_BDD:
 	$(call creadirv, "Bases de datos distribuidas", $(BDD_OUT))
 
 
-GRD: MAIN_GRD
-MAIN_GRD:
+GRD: INIT_GRD
+INIT_GRD:
 	$(call creadirv, "Gestión de recursos digitales", $(GRD_OUT))
 
 
-IN: MAIN_IN
-MAIN_IN:
+IN: INIT_IN
+INIT_IN:
 	$(call creadirv, "Inteligencia de negocio", $(IN_OUT))
 
 
-RINF: MAIN_RINF
-MAIN_RINF:
+RINF: INIT_RINF
+INIT_RINF:
 	$(call creadirv, "Recuperación de información", $(RINF_OUT))
 
 
-RSC: MAIN_RSC
-MAIN_RSC:
+RSC: INIT_RSC
+INIT_RSC:
 	$(call creadirv, "Redes y sistemas complejos", $(RSC_OUT))
 
 
-SIG: MAIN_SIG
-MAIN_SIG:
+SIG: INIT_SIG
+INIT_SIG:
 	$(call creadirv, "Sistemas de información geográficos", $(SIG_OUT))
 
  #
   # Tecnologías de la información - 4º 1er cuatrimestre
  #
 
-TI41: MAIN_TI41 CRIM DAI IV SPSI TID
-MAIN_TI41:
+TI41: INIT_TI41 CRIM DAI IV SPSI TID
+INIT_TI41:
 	$(call creadir, "4º 1er - Tecnologías de la información", $(TI41_OUT))
 
 
-CRIM: MAIN_CRIM
-MAIN_CRIM:
+CRIM: INIT_CRIM
+INIT_CRIM:
 	$(call creadirv, "Comprensión y recuperación de información multimedia", $(CRIM_OUT))
 
 
-DAI: MAIN_DAI
-MAIN_DAI:
+DAI: INIT_DAI
+INIT_DAI:
 	$(call creadirv, "Desarrollo de aplicaciones para internet", $(DAI_OUT))
 
 
-IV: MAIN_IV
-MAIN_IV:
+IV: INIT_IV
+INIT_IV:
 	$(call creadirv, "Infraestructura virtual", $(IV_OUT))
 
 
-SPSI: MAIN_SPSI
-MAIN_SPSI:
+SPSI: INIT_SPSI
+INIT_SPSI:
 	$(call creadirv, "Seguridad y protección de sistemas informáticos", $(SPSI_OUT))
 
 
-TID: MAIN_TID
-MAIN_TID:
+TID: INIT_TID
+INIT_TID:
 	$(call creadirv, "Tratamiento de imágenes digitales", $(TID_OUT))
 
  #
   # 4º 2º cuatrimestre
  #
 
-C42: MAIN_C42 CSI42 IC42 IS42 SI42 TI42
-MAIN_C42:
+C42: INIT_C42 CSI42 IC42 IS42 SI42 TI42
+INIT_C42:
 	$(call creadir, "4º 2º cuatrimestre", $(C42_OUT))
 
  #
   # Computación y sistemas inteligentes - 4º 2º cuatrimestre
  #
 
-CSI42: MAIN_CSI42 CRIP PLD RI
-MAIN_CSI42:
+CSI42: INIT_CSI42 CRIP PLD RI
+INIT_CSI42:
 	$(call creadir, "4º 2º - Computación y sistemas inteligentes", $(CSI42_OUT))
 
 
-CRIP: MAIN_CRIP
-MAIN_CRIP:
+CRIP: INIT_CRIP
+INIT_CRIP:
 	$(call creadirv, "Criptografía y computación", $(CRIP_OUT))
 
 
-PLD: MAIN_PLD
-MAIN_PLD:
+PLD: INIT_PLD
+INIT_PLD:
 	$(call creadirv, "Programación lúdica", $(PLD_OUT))
 
 
-RI: MAIN_RI
-MAIN_RI:
+RI: INIT_RI
+INIT_RI:
 	$(call creadirv, "Robótica industrial", $(RI_OUT))
 
  #
   # Ingeniería de computadores - 4º 2º cuatrimestre
  #
 
-IC42: MAIN_IC42 CII MEI
-MAIN_IC42:
+IC42: INIT_IC42 CII MEI
+INIT_IC42:
 	$(call creadir, "4º 2º - Ingeniería de computadores", $(IC42_OUT))
 
 
-CII: MAIN_CII
-MAIN_CII:
+CII: INIT_CII
+INIT_CII:
 	$(call creadirv, "Circuitos integrados e impresos", $(CII_OUT))
 
 
-MEI: MAIN_MEI
-MAIN_MEI:
+MEI: INIT_MEI
+INIT_MEI:
 	$(call creadirv, "Mantenimiento de equipos informáticos", $(MEI_OUT))
 
  #
   # Ingeniería del software - 4º 2º cuatrimestre
  #
 
-IS42: MAIN_IS42 AO NTP PPR
-MAIN_IS42:
+IS42: INIT_IS42 AO NTP PPR
+INIT_IS42:
 	$(call creadir, "4º 2º - Ingeniería del software", $(IS42_OUT))
 
 
-AO: MAIN_AO
-MAIN_AO:
+AO: INIT_AO
+INIT_AO:
 	$(call creadirv, "Animación por ordenador", $(AO_OUT))
 
 
-NTP: MAIN_NTP
-MAIN_NTP:
+NTP: INIT_NTP
+INIT_NTP:
 	$(call creadirv, "Nuevas tecnologías de la programación", $(NTP_OUT))
 
 
-PPR: MAIN_PPR
-MAIN_PPR:
+PPR: INIT_PPR
+INIT_PPR:
 	$(call creadirv, "Programaciones paralelas", $(PPR_OUT))
 
  #
   # Sistemas de información - 4º 2º cuatrimestre
  #
 
-SI42: MAIN_SI42 PDIH SCGC
-MAIN_SI42:
+SI42: INIT_SI42 PDIH SCGC
+INIT_SI42:
 	$(call creadir, "4º 2º - Sistemas de información", $(SI42_OUT))
 
 
-PDIH: MAIN_PDIH
-MAIN_PDIH:
+PDIH: INIT_PDIH
+INIT_PDIH:
 	$(call creadirv, "Periféricos y dispositivos de interfaz humana", $(PDIH_OUT))
 
 
-SCGC: MAIN_SCGC
-MAIN_SCGC:
+SCGC: INIT_SCGC
+INIT_SCGC:
 	$(call creadirv, "Sistemas cooperativos y gestión de contenidos", $(SCGC_OUT))
 
  #
   # Tecnologías de la información - 4º 2º cuatrimestre
  #
 
-TI42: MAIN_TI42 PDM PDS RMS
-MAIN_TI42:
+TI42: INIT_TI42 PDM PDS RMS
+INIT_TI42:
 	$(call creadir, "4º 2º - Tecnologías de la información", $(TI42_OUT))
 
 
-PDM: MAIN_PDM
-MAIN_PDM:
+PDM: INIT_PDM
+INIT_PDM:
 	$(call creadirv, "Programación de dispositivos móviles", $(PDM_OUT))
 
 
-PDS: MAIN_PDS
-MAIN_PDS:
+PDS: INIT_PDS
+INIT_PDS:
 	$(call creadirv, "Procesamiento digital de señales", $(PDS_OUT))
 
 
-RMS: MAIN_RMS
-MAIN_RMS:
+RMS: INIT_RMS
+INIT_RMS:
 	$(call creadirv, "Redes multiservicio", $(RMS_OUT))
 
  #
   # Formación complementaria interdisciplinar
  #
 
-FCI: MAIN_FCI CEGE DI EISI
-MAIN_FCI:
-	$(call creadir, "Formación complementaria interdisciplianr", $(FCI_OUT))
+FCI: INIT_FCI CEGE DI EISI
+INIT_FCI:
+	$(call creadir, "Formación complementaria interdisciplinar", $(FCI_OUT))
 
 
-CEGE: MAIN_CEGE
-MAIN_CEGE:
+CEGE: INIT_CEGE
+INIT_CEGE:
 	$(call creadirv, "Creación de empresas y gestión emprendedora", $(CEGE_OUT))
 
 
-DI: MAIN_DI
-MAIN_DI:
+DI: INIT_DI
+INIT_DI:
 	$(call creadirv, "Derecho informático", $(DI_OUT))
 
 
-EISI: MAIN_EISI
-MAIN_EISI:
+EISI: INIT_EISI
+INIT_EISI:
 	$(call creadirv, ("Ética, informática y sociedad de la información"), $(EISI_OUT))
 
  #
   # Prácticas de empresa
  #
 
-PE: MAIN_PE
-MAIN_PE:
+PE: INIT_PE
+INIT_PE:
 	$(call creadirv, "Prácticas de empresa", $(PE_OUT))
 
  #
   # Trabajos de fin de grado
  #
 
-TFG: MAIN_TFG
-MAIN_TFG:
+TFG: INIT_TFG
+INIT_TFG:
 	$(call creadirv, "Trabajo de fin de grado", $(TFG_OUT))
 
  #

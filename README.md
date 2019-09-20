@@ -2,8 +2,6 @@
 
 **Repositorio general de apuntes del Grado en Ingeniería Informática de la Universidad de Granada**
 
-# LA APERTURA PÚBLICA DEL REPOSITORIO SERÁ EN SEPTIEMBRE. POR AHORA PUEDES SUBIR APUNTES PERO NOS FALTAN ALGUNAS FUNCIONALIDADES.
-
 ## ESTRUCTURA DEL REPOSITORIO:
 
 - **FICHEROS DEL REPOSITORIO:** Contiene ejercicios y apuntes elaborados por los propios estudiantes.
