@@ -31,7 +31,7 @@ Para compilar, sitúate en la raíz, donde se encuentra el `Makefile` y ejecuta 
 
 ### LICENCIAS ORIGINALES
 
-Este repositorio las respetará siempre y cuando estas sean de carácter libre y colaborativo y estén especificadas en la cabecera del propio fichero o en su propio directorio.
+Este repositorio las respetará siempre y cuando estas sean de carácter libre y colaborativo y estén especificadas en el propio fichero o en su propio directorio.
 
 ### APORTACIONES SIN LICENCIA EXPLÍCITA
 
