@@ -1,0 +1,80 @@
+#!/bin/bash
+
+#	Autor: Antonio David Villegas Yeguas
+# 	1ro GII - ETSIIT UGR, curso 2018/19
+#
+#  This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http:#www.gnu.org/licenses/>.
+#
+
+#Variables por defecto
+BINARIO=/tmp/kernel32-3.0.4
+ISO=/tmp/Fedora14-x86-root_fs
+MEM=1024m
+
+
+#Podemos alterar las variables con parametros
+if [ $# -eq 3 ]; then
+	BINARIO=$1
+	ISO=$2
+	MEM=$3
+elif [ $# -eq 2 ]; then
+	BINARIO=$1
+	ISO=$2
+elif [ $# -eq 1 ]; then
+	#Instrucciones de uso
+	echo "Necesito al menos kernel e ISO "
+	echo "Uso: "
+	echo "   3 parametros: KERNEL, ISO y TAM_MEMORIA"
+	echo "   2 parametros: KERNEL, ISO, TAM_MEMORIA=1024m"
+	echo "   0 parametros: KERNEL=auto, ISO=auto, TAM_MEMORIA=1024m"
+
+elif [ $# -eq 0 ]; then
+
+	#Comprobamos que estamos en la red de la UGR, para buscar los ficheros
+	if [ -d /fenix/depar/lsi/UML/ ]; then
+		#Si no existen, copiamos y extraemos
+		if [ ! -e $BINARIO ]; then
+			echo "Usando PATH por defecto."
+			cp /fenix/depar/lsi/UML/kernel32-3.0.4.gz /tmp/
+			gunzip /tmp/kernel32-3.0.4.gz
+		fi
+
+		if [ ! -e $ISO ]; then
+				echo "Usando ISO por defecto.";
+				cp /fenix/depar/lsi/UML/Fedora14-x86-root_fs.gz /tmp/
+				gunzip /tmp/Fedora14-x86-root_fs.gz
+		fi
+	else
+		#Si estamos en una red externa, los descargamos
+		if [ ! -e /tmp/Fedora14 ]; then
+			wget http://fs.devloop.org.uk/filesystems/Fedora14/Fedora14-x86-root_fs.bz2 -O /tmp/Fedora14.bz2
+			bzip2 -d /tmp/Fedora14.bz2
+		fi
+		
+		if [ ! -e /tmp/kernel ]; then
+			wget http://uml.devloop.org.uk/kernels/kernel32-3.0.101.xz -O /tmp/kernel.xz
+			xz --decompress /tmp/kernel.xz
+		fi
+
+		BINARIO=/tmp/kernel
+		ISO=/tmp/Fedora14
+
+	fi
+fi
+
+#Damos permisos de ejecucio al binario
+chmod +x $BINARIO
+
+#Ejecutamos
+$BINARIO ubda=$ISO mem=$MEM 
