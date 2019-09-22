@@ -14,12 +14,13 @@ En la guía docente puedes consultar el contenido de la asignatura, los profesor
 
 Por ahora no se ha modificado la estructura de la asignatura.
 
+## RECURSOS DE OTRAS UNIVERSIDADES
+
+  * [Programación I - Grado Ing. Inf. 1er curso. Universidad Nebrija](https://github.com/Nebrija-Programacion/Programacion-I/)
+
+
 <p align="center">
    <b>Este repositorio es fruto del esfuerzo de los estudiantes de la Universidad de Granada</b></br>
    <a href="http://deiit.ugr.es/"><img width="401" height="160" src="https://deiit.ugr.es/img/logo-DEIIT.png"> </a>
 </p>
 
-
-## RECURSOS DE OTRAS UNIVERSIDADES
-
-  * [Programación I - Grado Ing. Inf. 1er curso. Universidad Nebrija](https://github.com/Nebrija-Programacion/Programacion-I)
