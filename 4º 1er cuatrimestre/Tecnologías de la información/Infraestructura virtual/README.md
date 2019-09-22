@@ -6,6 +6,10 @@
 
 En la guía docente puedes consultar el contenido de la asignatura, los profesores que la imparten junto con su información de contacto, el método de evaluación, la bibliografía y recomendaciones antes de cursar la asignatura.
 
+Hay una [versión de la guía docente en markdown](https://github.com/JJ/Ingenieria-Informatica) (conversión con pandoc, puede que no sea ideal)
+
+Los apuntes de la asignatura están en [este repo de GitHub](https://github.com/JJ/IV) y renderizados en la [web](https://jj.github.io/IV). Se agradecerá que cualquier cambio o sugerencia se hagan en ese repo.
+
 ## COLABORADORES
 
 **Puedes ampliar esta lista haciendo tú mismo una contribución al repositorio. [Aquí](https://github.com/DEIIT/Ingenieria-Informatica/wiki/C%C3%B3mo-contribuir) encontrarás más información sobre cómo hacerlo.**
