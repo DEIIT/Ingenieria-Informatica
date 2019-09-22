@@ -1,0 +1,257 @@
+\documentclass[12pt, spanish]{article}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{listings}
+
+\usepackage[default]{sourcesanspro}
+
+\setmarginsrb{2 cm}{1 cm}{2 cm}{2 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Sistemas Operativos:\\
+Trabajo Tema 3  \hspace{0.05cm} }   
+
+\author{Pedro Jiménez Alférez \\
+Marina Hernádez Bautista  \\
+Juan Carlos González Quesada \\
+Román Larrosa Lewandowska \\
+María Sánchez Marcos \\
+Antonio David Villegas Yeguas	}                             
+
+\renewcommand*\contentsname{hola}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\chead{\thedate}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+    \centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.50]{ugr.png}\\[1.0 cm]
+    %\textsc{\LARGE Universidad de Granada}\\[2.0 cm]   
+    \textsc{\large 2ºB}\\[0.5 cm]            
+    \textsc{\large Grado en Ingeniería Informática}\\[0.5 cm]              
+    \rule{\linewidth}{0.2 mm} \\[0.4 cm]
+    { \huge \bfseries \thetitle}\\
+    \rule{\linewidth}{0.2 mm} \\[1.5 cm]
+    
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+            \emph{Autores:}\\
+            
+            \small \theauthor
+            \end{flushleft}
+            \end{minipage}~
+            \begin{minipage}{0.4\textwidth}
+            \begin{flushright} \large
+            \emph{Asignatura: \\
+            Sistemas Operativos}                   
+        \end{flushright}
+    \end{minipage}\\[1 cm]
+  	
+    {\small \thedate}\\[1 cm]
+ 	
+    \vfill
+    
+\end{titlepage}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introducción}
+
+El sistema operativo elegido para analizar su gestión de energía es Arch Linux, distribución basada en GNU/Linux. Como cualquier SO, los basados en linux requieren de herramientas que ayuden en la gestión del consumo de energía, ya sea por tener un uso limitado de ésta (portátiles y notebooks), o por mera optimización de los recursos. En las siguientes líneas, analizaremos los principales problemas que se nos presentan a la hora de elegir la manera óptima de gestión y las herramientas que el sistema o las aplicaciones de terceros nos aportan para controlar el consumo de la energía que hace nuestro sistema operativo. 
+
+
+La mayoría del kernel, como vimos en el trabajo anterior, son módulos, que a su vez estos se usan para gestionar los drivers de cada dispositivo, debido a que normalmente no necesitaremos tener muchos drivers cargados. Esto hace que la gestión de energía sea prácticamente específica de cada dispositivo, ya que cada dispositivo tendrá código que gestiona el uso del dispositivo en su driver.
+
+
+\section{Modelos de gestión de energía en Linux}
+
+Normalmente, en linux se usan dos modelos de gestión de energía:
+
+\begin{enumerate}
+
+
+\item \textbf{System Sleep model}: 
+
+\quad	Los drivers pueden entrar en un estado de uso bajo de energía como parte del sistema de ahorro de energía, estos estados pueden ser, por ejemplo “suspensión” o “hibernación”.
+Esto es algo en lo que dispositivos, buses y clases de drivers colaboran en implementar varios métodos de suspensión y reanudación específico de cada rol para apagar de manera limpia el hardware y subsistemas de software, y entonces, re-activarlo sin pérdida de datos.
+
+Algunos drivers pueden controlar eventos de activación de hardware, que hacen que el sistema abandone el estado de bajo consumo. Esta herramienta puede ser desactivada o anulada usando el archivo /sys/devices/.../power/wakeup; deshabilitarlo significa consumir más energía, pero permite al sistema entero entrar en el modo de bajo consumo más a menudo.
+
+
+\item \textbf{Runtime Power Management model}:
+
+\quad	 Los dispositivos que conforman el sistema, siempre que puedan se pondrán en un estado de bajo uso de energía, independientemente de otras actividades de gestión de energía del sistema. Aun así, un dispositivo que depende de otros, no podrá pasar a este modo a no ser que todos los dispositivos de los que dependen cambien a modo de bajo consumo. Además, dependiendo del bus que gestione el dispositivo, es necesario realizar algunas operaciones para mantener a los dispositivos en modo bajo consumo (por ejemplo, cuando suspendemos el sistema, o este entra en un estado de hibernación).
+
+A nivel de software, la mayor parte de la implementación de la gestión de energía en el Linux se encuentra definida en include/linux/pm.h  y en concreto, las operaciones de gestión de energía están implementadas en estructuras  struct dev\_pm\_ops .
+
+
+Los métodos para suspender y despertar a los dispositivos  están definidos en struct dev\_pm\_ops que es parte de struct dev\_pm\_domain o el miembro pm del struct bus\_type, struct device\_type y struct class.
+
+
+\end{enumerate}
+
+
+\section{Ficheros de gestión de energía}
+
+Cada dispositivo, en sus drivers, contiene estos ficheros, de gestión de energía:
+
+\subsection{Archivos /sys/devices/.../power/wakeup}
+
+    Estos campos se inicializan por el bus o por el código del driver de cada dispositivo usando device\_set\_wakeup\_capable() y device\_set\_wakeup\_enable(), definidos en include/linux/pm\_wakeup.h.
+La flag power.can\_wakeup solo registra si el dispositivo puede apoyar físicamente los eventos wakeup. La rutina device\_set\_wakeup\_capable() afecta a esta flag. El campo power.wakeup es un puntero a un objeto de tipo struct wakeup\_source usado para controlar si el dispositivo debería usar su mecanismo wakeup o no y para notificar el núcleo de control de energía del sistema de eventos wakeup señalados por el dispositivo. Estos objetos solo están presentes en los dispositivos que permiten el wakeup y son creados por device\_set\_wakeup\_capable().
+
+
+\subsection{Archivos /sys/devices/.../power/control}
+
+    Cada dispositivo, en su driver tiene un flag para controlar cuando el dispositivo tiene que ser controlado por el  proceso de gestión de energía. Este flag, runtime\_auto, es inicializado por el código del bus usando pm\_runtime\_allow() o pm\_runtime\_forbid(); el estado por defecto es permitir el proceso de gestión de energía.
+
+    Estos ajustes pueden ser modificados por el usuario, escribiendo “on” o “auto” en los archivos power/control de cada dispositivo; la opción “auto” llama a pm\_runtime\_auto() y “on” llama a pm\_runtime\_forbid()
+
+
+\newpage
+
+
+\section{Herramientas de gestión de energía en Linux}
+
+\subsection{TLP}
+
+TLP es una herramienta de gestión avanzada de energía para ArchLinux que realiza ajustes en la manera como el hardware de un equipo consume energía sin la necesidad de entender todos los detalles técnicos. TLP permite su modificación para cumplir nuestros requisitos.
+Una de las ventajas de esta aplicación, es que optimiza la batería de los portátiles para que duren más tiempo.
+
+Para su instalación en ArchLinux y derivados, tenemos que usar los comandos: 
+
+\begin{lstlisting}[language=bash]
+
+  $ sudo pacman -S tlp tlp-rdwz
+  $ systemctl enable tlp.service
+  $ systemctl enable tlp-sleep.service
+  $ systemctl enable NetworkManager-dispatcher.service
+  
+\end{lstlisting}
+
+Una vez realizada la instalación, debemos habilitar los servicios de sistema tlp.service y tlp-sleep.service
+También debemos ocultar el servicio system-rfkill.service y el system-rfkill.socket para evitar problemas.
+
+\subsubsection{Características}
+
+Dos de las características más importantes que presenta esta aplicación son: 
+
+\begin{itemize}
+
+\item{Permitir un programador de procesos de consumo de energía para multicore/hyperthreading.}
+\item{Ofrece un nivel avanzado de administración de energía del disco duro.}
+
+\end{itemize}
+
+Ademas otros servicios son:
+
+\begin{itemize}
+\item{Modo de ahorro energético en la mayoría del hardware de un sistema de uso general}
+\item{Diferentes configuraciones a través de parámetros de ahorro de energía.}
+\item{Proporciona administración de energía para dispositivos bus de PCI en tiempo de ejecución.}
+\end{itemize}
+
+Algunas de las opciones que se pueden usar en TLP son:
+
+\begin{itemize}
+\item{\textbf{-c}: para ver la configuración actual.}
+\item{\textbf{-stat}:para mostrar todas las configuraciones de energía.}
+\item{\textbf{-b} para mostrar la información de la batería.}
+\item{\textbf{-t} para visualizar la temperatura y velocidad del ventilador del sistema.}
+\item{\textbf{-p} para mostrar los datos del procesador}
+\end{itemize}
+
+
+\subsection{Thermald}
+
+Thermald es otra herramienta que nos facilita la gestión del consumo energético, aunque de una manera más automatizada, sin tantas opciones de configuración de usuario como las que nos ofrece TLP. Es un daemon, por lo que se ejecuta en segundo plano en nuestro sistema y no es necesario estar controlandolo. Sus objetivos básicos son el evitar la regulación térmica de la BIOS tanto como se pueda, usando controles proactivos,  y cuestionar la validez de la ACPI (Advanced Configuration and Power Interface), modificando sus valores desde el kernel de linux. La herramienta tiene soporte para todos los sistemas Linux y aquellos que también estén basados en este, como Android o Chrome OS.
+
+
+Las tareas básicas del daemon son: 
+
+\begin{enumerate}
+\item{Leer los sensores de temperatura integrados (DTS: Digital Temperature Sensors).}
+\item{Calcular dinámicamente los puntos de ajuste (o alternativamente usar valores pre-establecidos o guardados con anterioridad).}
+\item{Una vez se llega a este punto de ajuste, usar el mejor método de “cooling” (enfriamiento).}
+\item{Permitir al usuario establecer preferencias.}
+\end{enumerate}
+
+
+
+\subsection{Ahorro de energía usando SystemD}
+SystemD lleva los eventos ACPI(Advanced Configuration and Power Interface). En caso de sistemas que no tengan administrador de energía dedicado, se reemplazará con el demonio acpid, que es utilizado para reaccionar a estos eventos. Estos eventos son:
+
+\begin{enumerate}
+	\item{HandlePowerKey: se activa cuando se pulsa el botón/tecla de encendido. La acción que realiza es poweroff}
+	\item{HandleSuspendKey: se activa cuando se pulsa el botón/tecla de suspensión. Realiza la orden suspend}
+	\item{HandleHibernateKey: se activa cuando se pulsa el botón/tecla de hibernación. Instrucción hibernate}
+	\item{HandleLidSwitch: se activa cuando se cierra manualmente la tapa de nuestro portátil, excepto en los casos anteriores.} 
+	\item{HandleLidSwitchDocked: activado cuando se cierra la tapa en un sistema insertado en una estación de acoplamiento (docking station), o más de un dispositivo está conectado.}
+	\item{HandleLidSwitchExternalPower: activado cuando se cierra la tapa si el sistema está conectado a una fuente de energía externa. Establece el evento HandleLidSwitch.}
+
+\end{enumerate}
+
+\newpage
+
+\subsection{Herramientas de uso general}
+
+Las herramientas de usuario más útiles para ahorrar energía son:
+
+\begin{enumerate}
+\item \textbf{En la consola}
+
+	\begin{enumerate}
+	
+		\item{\textbf{acpid}: un demonio para el ahorro de energía mediante eventos de ACPI}
+    		\item{\textbf{Laptop Mode Tools}: herramienta para el ahorro de energía por defecto}
+    		\item{\textbf{powertop}: diagnostica problemas con el consumo y administración de energía.}
+    		\item{\textbf{systemd}: manager del sistema y de servicios}
+    		\item{\textbf{TLP}: aplicación para la administración de energía en Linux}
+	
+	\end{enumerate}
+	
+	
+\item \textbf{Modo gráfico}
+
+\quad En modo gráfico, cada entorno de escritorio suele traer tanto programas para ver estadísticas, como de control de la energía; cada uno de estos programas lo podremos utilizar desde los ajustes de cada uno de los distintos entornos de escritorio.
+
+
+\end{enumerate}
+
+\vspace{5cm}
+
+
+\bibliographystyle{plain}
+\bibliography{biblist}
+
+
+\end{document}
