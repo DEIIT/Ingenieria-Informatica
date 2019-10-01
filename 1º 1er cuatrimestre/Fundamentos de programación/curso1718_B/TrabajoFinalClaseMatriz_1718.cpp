@@ -9,33 +9,33 @@ struct posicion
 	int col;
 };
 
-// Definiremos la clase Matriz, con ella podremos realizar f·cilmente operaciones con matrices y controlar sus datos.
+// Definiremos la clase Matriz, con ella podremos realizar f√°cilmente operaciones con matrices y controlar sus datos.
 class Matriz
 {
-	// Para que solo se pueden usar desde la clase declararemos los datos miembros en el ·mbito privado.
+	// Para que solo se pueden usar desde la clase declararemos los datos miembros en el √°mbito privado.
 	private:
 		
-		// Lo declaramos de tipo "static const int" por que tendr· el mismo valor en todos los objetos.
+		// Lo declaramos de tipo "static const int" por que tendr√° el mismo valor en todos los objetos.
 		static const int MAX = 50;
 		int dato[MAX][MAX];
 		int util_fil, util_col;
-		// El tamaÒo real de la matriz lo inicializaremos en los constructores de la clase.
+		// El tama√±o real de la matriz lo inicializaremos en los constructores de la clase.
 	
-	// En el ·mbito p˙blico declararemos los constructores y los mÈtodos que nos puedan servir en el main.
+	// En el √°mbito p√∫blico declararemos los constructores y los m√©todos que nos puedan servir en el main.
 	public:
 		
 		// Constructores.
-		// Sirven para que al declarar un objeto no tenga un estado inv·lido.
+		// Sirven para que al declarar un objeto no tenga un estado inv√°lido.
 		
-		// El primer constructor se usar· por defecto e incializar· el objeto.
+		// El primer constructor se usar√° por defecto e incializar√° el objeto.
 		Matriz()
 			:util_fil(0), util_col(0) {}
 		
-		//  El segundo constructor se usar· cuando pasemos 2 par·metros, el n˙mero de filas y el n˙mero de columnas.
-		//  Inicializar· los valores del objeto, rellenando la matriz con ceros. Si los par·metros no son v·lidos usamos al primer constructor.
+		//  El segundo constructor se usar√° cuando pasemos 2 par√°metros, el n√∫mero de filas y el n√∫mero de columnas.
+		//  Inicializar√° los valores del objeto, rellenando la matriz con ceros. Si los par√°metros no son v√°lidos usamos al primer constructor.
 		Matriz(int num_fil, int num_col)				
 		{
-			if (num_fil > 0 && num_fil <= MAX && num_col > 0 && num_col <= MAX)	// ComprobaciÛn de que los par·metros son v·lidos
+			if (num_fil > 0 && num_fil <= MAX && num_col > 0 && num_col <= MAX)	// Comprobaci√≥n de que los par√°metros son v√°lidos
 			{
 				util_fil = num_fil;
 				util_col = num_col;
@@ -50,7 +50,7 @@ class Matriz
 			
 			
 		// Obtener datos.
-		// Con estos mÈtodos podremos obtener los datos del objeto que sean necesarios.
+		// Con estos m√©todos podremos obtener los datos del objeto que sean necesarios.
 		
 		int MaxFilas()
 		{
@@ -72,7 +72,7 @@ class Matriz
 			return util_col;
 		}
 		
-		int Elemento(int fila, int columna)			// Al no saber excepciones devolveremos -1 en caso de que se introduzcan par·metros erroneos.
+		int Elemento(int fila, int columna)			// Al no saber excepciones devolveremos -1 en caso de que se introduzcan par√°metros erroneos.
 		{
 			int valor = -1;
 			
@@ -84,10 +84,10 @@ class Matriz
 		
 		
 		// Operaciones.
-		// Estos mÈtodos nos serviran para realizar operaciones con Matrices f·cilmente.
+		// Estos m√©todos nos serviran para realizar operaciones con Matrices f√°cilmente.
 		
-		// Devolveremos la matriz vacÌa si no se cumple la precondiciÛn (En la suma y resta las matrices tienen que tener el mismo tamaÒo).
-		// Si tienen el mismo tamaÒo sumaremos las componentes o las restaremos.
+		// Devolveremos la matriz vac√≠a si no se cumple la precondici√≥n (En la suma y resta las matrices tienen que tener el mismo tama√±o).
+		// Si tienen el mismo tama√±o sumaremos las componentes o las restaremos.
 		Matriz Suma(Matriz m1)
 		{
 			Matriz m2;
@@ -122,7 +122,7 @@ class Matriz
 			return Resultado;
 		}
 		
-		// Multiplicamos cada componente por el escalar pasado como par·metro
+		// Multiplicamos cada componente por el escalar pasado como par√°metro
 		Matriz Escalar(int escalar)
 		{
 			Matriz Resultado;
@@ -137,7 +137,7 @@ class Matriz
 			return Resultado;
 		}
 		
-		// La precondiciÛn es que las columnas de la matriz del objetos sean iguales a las filas de la matriz de m1.
+		// La precondici√≥n es que las columnas de la matriz del objetos sean iguales a las filas de la matriz de m1.
 		Matriz Producto(Matriz m1)
 		{
 			Matriz Resultado;
@@ -176,8 +176,8 @@ class Matriz
 			return tras;
 		}
 		
-		// Usamos la busqueda secuencial para buscar la posiciÛn de x en la Matriz del objeto.
-		// Si no lo encontramos devolveremos -1 y -1 como posiciÛn.
+		// Usamos la busqueda secuencial para buscar la posici√≥n de x en la Matriz del objeto.
+		// Si no lo encontramos devolveremos -1 y -1 como posici√≥n.
 		posicion BuscarElemento(int x)
 		{
 			posicion Buscado;
@@ -214,7 +214,7 @@ class Matriz
 					n++;
 				}
 			
-			// Ordenamos el vector usando el mÈtodo de la burbuja.
+			// Ordenamos el vector usando el m√©todo de la burbuja.
 			
 			int tmp;
 			bool cambio = true;
@@ -252,7 +252,7 @@ class Matriz
 		
 		
 		// Modificar Matriz.
-		// Estos mÈtodos serviran para modificar los datos miembro del objeto.
+		// Estos m√©todos serviran para modificar los datos miembro del objeto.
 		
 		void Borrar()
 		{
@@ -301,13 +301,13 @@ Matriz LeerMatriz()
 	
 	do
 	{
-	cout << "\nIntroduce el n˙mero de filas que tendr· la Matriz: ";
+	cout << "\nIntroduce el n√∫mero de filas que tendr√° la Matriz: ";
 	cin >> total_fil;
 	} while (total_fil < 0 && total_fil > a.MaxFilas());
 		
 	do
 	{
-	cout << "\nIntroduce el n˙mero de columnas que tendr· la Matriz: ";
+	cout << "\nIntroduce el n√∫mero de columnas que tendr√° la Matriz: ";
 	cin >> total_col;
 	} while (total_col < 0 && total_col > a.MaxColumnas());
 	
@@ -338,9 +338,9 @@ void MostrarMatriz(Matriz m1)
 	}
 }
 
-// A PARTIR DE AQUÕ EMPIEZA UN EJEMPLO DE USO DE LA CLASE
-// Usaremos varias funciones de Menu para elegir que hacer con una Matriz leÌda.
-// Esto servira de ejemplo como aplicaciÛn pr·ctica de la clase que hemos desarrollado.
+// A PARTIR DE AQU√ç EMPIEZA UN EJEMPLO DE USO DE LA CLASE
+// Usaremos varias funciones de Menu para elegir que hacer con una Matriz le√≠da.
+// Esto servira de ejemplo como aplicaci√≥n pr√°ctica de la clase que hemos desarrollado.
 
 int MenuPrincipal()
 {
@@ -354,7 +354,7 @@ int MenuPrincipal()
 		cout << "\n[3] Modificar la Matriz";
 		cout << "\n[4] Salir";
 		cout << "\n*******************************************\n";
-		cout << "Elige una opciÛn: ";
+		cout << "Elige una opci√≥n: ";
 		cin >> opcion;
 	}while(opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4);
 	
@@ -374,9 +374,9 @@ int MenuOperar()
 		cout << "\n[4] Multiplicar Matriz por otra Matriz";
 		cout << "\n[5] Buscar elemento dentro de la Matriz";
 		cout << "\n[6] Ordenar Matriz de Menor a Mayor";		
-		cout << "\n[7] Salir al Men˙ Principal";
+		cout << "\n[7] Salir al Men√∫ Principal";
 		cout << "\n*******************************************\n";
-		cout << "Elige una opciÛn: ";
+		cout << "Elige una opci√≥n: ";
 		cin >> opcion;
 	}while(opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4 && opcion != 5 && opcion != 6 && opcion != 7);
 	
@@ -391,12 +391,12 @@ int MenuMostrar()
 	{
 		cout << "\n\n*******************************************";
 		cout << "\n[1] Mostrar la Matriz";
-		cout << "\n[2] Mostrar el n˙mero de filas";
-		cout << "\n[3] Mostrar el n˙mero de columnas";
+		cout << "\n[2] Mostrar el n√∫mero de filas";
+		cout << "\n[3] Mostrar el n√∫mero de columnas";
 		cout << "\n[4] Mostrar un elemento en concreto";
-		cout << "\n[5] Salir al Men˙ Principal";
+		cout << "\n[5] Salir al Men√∫ Principal";
 		cout << "\n*******************************************\n";
-		cout << "Elige una opciÛn: ";
+		cout << "Elige una opci√≥n: ";
 		cin >> opcion;
 	}while(opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4 && opcion != 5);
 	
@@ -414,9 +414,9 @@ int MenuModificar()
 		cout << "\n[2] Eliminar una fila";
 		cout << "\n[3] Eliminar una columna";
 		cout << "\n[4] Volver a leer Matriz";
-		cout << "\n[5] Salir al Men˙ Principal";
+		cout << "\n[5] Salir al Men√∫ Principal";
 		cout << "\n*******************************************\n";
-		cout << "Elige una opciÛn: ";
+		cout << "Elige una opci√≥n: ";
 		cin >> opcion;
 	}while(opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4 && opcion != 5);
 	
@@ -430,10 +430,10 @@ bool Conservar()
 	
 	do
 	{
-		cout << "\n\nøConservar el resultado?";
-		cout << "\n[1] SÌ";
+		cout << "\n\n¬øConservar el resultado?";
+		cout << "\n[1] S√≠";
 		cout << "\n[2] No";
-		cout << "\nElige una opciÛn: ";
+		cout << "\nElige una opci√≥n: ";
 		cin >> opcion;
 	}while(opcion != 1 && opcion != 2);
 	
@@ -518,7 +518,7 @@ int main()
 					
 					pos = m1.BuscarElemento(n);
 					
-					cout << "\nEl elemento se encuentra en la posiciÛn [ " << pos.fil << " , " << pos.col << " ]";
+					cout << "\nEl elemento se encuentra en la posici√≥n [ " << pos.fil << " , " << pos.col << " ]";
 				}
 				
 				if(opcion_operar == 6)
@@ -544,10 +544,10 @@ int main()
 					MostrarMatriz(m1);
 					
 				if(opcion_mostrar == 2)
-					cout << "\nEl n˙mero de filas utilizadas es " << m1.FilasUtilizadas();
+					cout << "\nEl n√∫mero de filas utilizadas es " << m1.FilasUtilizadas();
 					
 				if(opcion_mostrar == 3)
-					cout << "\nEl n˙mero de columnas utilizadas es " << m1.FilasUtilizadas();
+					cout << "\nEl n√∫mero de columnas utilizadas es " << m1.FilasUtilizadas();
 					
 				if(opcion_mostrar == 4)
 				{
