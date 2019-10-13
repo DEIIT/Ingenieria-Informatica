@@ -10,7 +10,9 @@ En la guía docente puedes consultar el contenido de la asignatura, los profesor
 
 **Puedes ampliar esta lista haciendo tú mismo una contribución al repositorio. [Aquí](https://github.com/DEIIT/Ingenieria-Informatica/wiki/C%C3%B3mo-contribuir) encontrarás más información sobre cómo hacerlo.**
 
-- Apuntes Doble Grado en Ingeniería Informática y Matemáticas: [link](https://github.com/DGIIMUnderground/DGIIM2/tree/master/C1/EC)
+- Apuntes DGIIMUnderground: [link](https://github.com/DGIIMUnderground/DGIIM2/tree/master/C1/EC)
+- Apuntes LibreIM: [link](https://github.com/libreim/apuntesDGIIM/tree/master/EC)
+
 
 
 ## MODIFICACIONES DE ESTRUCTURA
