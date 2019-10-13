@@ -10,6 +10,9 @@ En la guía docente puedes consultar el contenido de la asignatura, los profesor
 
 **Puedes ampliar esta lista haciendo tú mismo una contribución al repositorio. [Aquí](https://github.com/DEIIT/Ingenieria-Informatica/wiki/C%C3%B3mo-contribuir) encontrarás más información sobre cómo hacerlo.**
 
+- Apuntes LibreIM: [link](https://github.com/libreim/apuntesDGIIM/tree/master/IES)
+
+
 ## MODIFICACIONES DE ESTRUCTURA
 
 Por ahora no se ha modificado la estructura de la asignatura.
