@@ -1,0 +1,83 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{c/style}
+\author{Guillermo Bueno}
+
+%Hipervinculos
+\usepackage[hidelinks]{hyperref}
+
+
+%Color
+\usepackage{color}
+\definecolor{nred}{RGB}{174,49,54}
+\definecolor{nblue}{RGB}{86,99,146}
+\definecolor{nalgo}{RGB}{188,139,76}
+\usepackage{sectsty}
+\sectionfont{\color{nred}}
+\subsectionfont{\color{nblue}}
+\subsubsectionfont{\color{nalgo}}
+
+
+
+%Cabeceras
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{Universidad de Granada}
+\fancyhead[C]{Prácticas SO}
+\fancyhead[L]{Grado en Ingeniería Informática}
+
+
+
+\begin{document}
+	
+	\begin{titlepage}
+		
+		\begin{center}
+			
+			{\Large {Grado en Ingeniería Informática } }
+			\\[1cm]
+			
+			
+			\includegraphics[scale=0.5]{logo.png}
+			\\[1cm]
+			
+			{\Huge \textsc{Resolución de examen\\[0.3cm]
+					Módulo II}}\\[0.7cm]
+			{\Huge Sistemas Operativos}\\[2cm]
+			
+			
+			
+			\textbf{\textsf{Autor:}}\\
+			\linespread{1}
+			\large Guillermo Bueno Vargas
+			\\[1cm]
+			
+			
+			
+			
+			
+		\end{center}
+		
+	\end{titlepage}
+	
+	\tableofcontents
+	
+	\section{Enunciado}
+	
+	\includegraphics[scale=0.4]{scan.png}
+	
+	\section{Código}
+	
+	\lstinputlisting[language=C,style=c]{path1.c}
+	
+	
+	
+\end{document}
