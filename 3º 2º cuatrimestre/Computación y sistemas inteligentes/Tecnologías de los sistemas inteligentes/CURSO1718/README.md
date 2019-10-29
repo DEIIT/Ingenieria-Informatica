@@ -1,3 +1,3 @@
-# CURSO 2017-2018
+# Curso 1718
 
- - Prácticas por David Gil Bautista: [enlace](https://github.com/DavidBaug/TSI)
+ - Curso 2017-18 por Guillermo Sandoval Schmidt: [enlace](https://github.com/Gsandoval96/TSI-UGR)
