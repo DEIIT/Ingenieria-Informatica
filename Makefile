@@ -34,20 +34,23 @@
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-  # MACROS SOBRE LA ESTRUCTURA DEL REPOSITORIO
-  #
-  #    Macros de búsqueda de directorios y resumen de órdenes. Estructura:
-  #     - Directorios principales (cuatrimiestres y ramas de 3º y 4º)
-  #     - Directorios de asignaturas (orden alfabético de código)
-  #     - Directorios out (Donde se guardan los archivos compilados)
-  #        - Directorios out principales
-  #        - Directorios out de asignaturas
-  #     - Macros de instrucciones
+# ==============================================================================
+# MACROS SOBRE LA ESTRUCTURA DEL REPOSITORIO
+# ------------------------------------------------------------------------------
+# Macros de búsqueda de directorios y resumen de órdenes. Estructura:
+#   - Directorios principales (cuatrimiestres y ramas de 3º y 4º)
+#     - Directorios de asignaturas (orden alfabético de código)
+#     - Directorios out (Donde se guardan los archivos compilados)
+#       - Directorios out principales
+#       - Directorios out de asignaturas
+#     - Macros de instrucciones
+# ==============================================================================
 
- #
-  # Directorios principales
- #
+# =======================
+# Directorios principales
+# =======================
 
+# Directorio raíz
 HOME = .
 
 # Cuatrimestres
@@ -84,9 +87,9 @@ IS42  =  $(C42)/Ingeniería\ de\ software
 SI42  =  $(C42)/Sistemas\ de\ información
 TI42  =  $(C42)/Tecnología\ de\ la\ información
 
- #
-  # Directorios de asignaturas
- #
+# ==========================
+# Directorios de asignaturas
+# ==========================
 
 AA   =  $(CSI32)/Aprendizaje\ automático
 AC   =  $(C22)/Arquitectura\ de\ computadores
@@ -183,9 +186,9 @@ TR   =  $(IC41)/Tecnologías\ de\ red
 TW   =  $(TI32)/Tecnologías\ web
 VC   =  $(CSI41)/Visión\ por\ computador
 
- #
-  # Directorios out principales
- #
+# ===========================
+# Directorios out principales
+# ===========================
 
 OUT = $(HOME)/Ingenieria-Informatica
 
@@ -223,9 +226,9 @@ IS42_OUT  =  $(C42_OUT)/Ingeniería\ del\ software
 SI42_OUT  =  $(C42_OUT)/Sistemas\ de\ información
 TI42_OUT  =  $(C42_OUT)/Tecnología\ de\ la\ información
 
- #
-  # Directorios out de asignaturas
- #
+# ==============================
+# Directorios out de asignaturas
+# ==============================
 
 AA_OUT   =  $(CSI32_OUT)/Aprendizaje\ automático
 AC_OUT   =  $(C22_OUT)/Arquitectura\ de\ computadores
@@ -322,41 +325,55 @@ TR_OUT   =  $(IC41_OUT)/Tecnologías\ de\ red
 TW_OUT   =  $(TI32_OUT)/Tecnologías\ web
 VC_OUT   =  $(CSI41_OUT)/Visión\ por\ computador
 
- #
-  # Otros directorios
- #
+# =================
+# Otros directorios
+# =================
 
 # Directorios de recursos para make
 MAKEDIR = $(HOME)/.make
 EISVOGEL = $(MAKEDIR)/eisvogel
 
-  # FUNCIONES SOBRE INSTRUCCIONES MAKE
-  #
-  #    Para simplificar el makefile, las instrucciones largas y repetidas
-  #    quedan recogidas como macros, de forma que se puedan leer más fácilmente
-  #    y se les puedan pasar argumentos más fácilmente.
+# ==============================================================================
+# FUNCIONES SOBRE INSTRUCCIONES MAKE
+# ------------------------------------------------------------------------------
+# Para simplificar el makefile, las instrucciones largas y repetidas quedan
+# recogidas como macros, de forma que se puedan leer más fácilmente y se les
+# puedan pasar argumentos más fácilmente.
+# ==============================================================================
 
+# =======================
 # Creación de directorios
-#  $(1) -> Nombre del directorio, se imprime en pantalla
-#  $(2) -> Ruta del directorio a crear (con macros)
+# -----------------------------------------------------
+# $(1) -> Nombre del directorio, se imprime en pantalla
+# $(2) -> Ruta del directorio a crear (con macros)
+# ================================================
+
 define creadir
 	@printf "\033[1;32mCreando directorio\033[0m %s\n" $(1)
 	@mkdir -p $(2)
 endef
 
+# =====================================================
 # Creación de directorios que no contienen órdenes make
-#  $(1) -> Nombre del directorio, se imprime en pantalla
-#  $(2) -> Ruta del directorio a crear (con macros)
+# -----------------------------------------------------
+# $(1) -> Nombre del directorio, se imprime en pantalla
+# $(2) -> Ruta del directorio a crear (con macros)
+# ================================================
+
 define creadirv
 	@awk 'BEGIN{printf "\033[1;32mCreando directorio\033[0m %-53s \033[1;31m¡VACÍO!\033[0m\n", $(1)}'
 	@mkdir -p $(2)
 endef
 
+# ======================================================
 # Compilación de ficheros Markdown a pdf mediante pandoc
-#  $(1) -> Nombre del fichero de salida (entrecomillado)
-#  $(2) -> Ruta del directorio en el que se encuentran los ficheros de origen
-#          (con macros)
-#  $(3) -> Ruta del fichero de salida (con macros)
+# -----------------------------------------------------
+# $(1) -> Nombre del fichero de salida (entrecomillado)
+# $(2) -> Ruta del directorio en el que se encuentran los ficheros de origen
+#         (con macros)
+# $(3) -> Ruta del fichero de salida (con macros)
+# ===============================================
+
 define md-pdf
 	@printf " \033[1;33m- \033[35mCreando\033[0m    %s.md...\n" $(1)
 	@cp $(2)/.yaml $(3)/$(strip $(1))
@@ -381,23 +398,24 @@ define md-pdf
 endef
 
 
-  # INSTRUCCIONES MAKE
-  #
-  #    Instrucciones de compilación del repositorio. Estructura:
-  #     - ALL -> Rama principal. De ella parten todos los cuatrimestres.
-  #     - CUATRIMESTRES -> Contienen las asignaturas de cada uno de ellos.
-  #     - ASIGNATURAS -> Contienen las instrucciones de compilación.
-  #     - MAIN -> Inicialización de cada sección.
-  #
-  #    Los ficheros de texto deben compilarse siempre y cuando no sean los
-  #    README de cada una de las ramas. Estos están diseñados para verse
-  #    en GitHub, no para ser compilados en Pandoc.
+# ==============================================================================
+# INSTRUCCIONES MAKE
+# ------------------------------------------------------------------------------
+# Instrucciones de compilación del repositorio. Estructura:
+#   - ALL -> Rama principal. De ella parten todos los cuatrimestres.
+#   - CUATRIMESTRES -> Contienen las asignaturas de cada uno de ellos.
+#   - ASIGNATURAS -> Contienen las instrucciones de compilación.
+#   - MAIN -> Inicialización de cada sección.
+#
+# Los ficheros de texto deben compilarse siempre y cuando no sean los
+# README de cada una de las ramas. Estos están diseñados para verse
+# en GitHub, no para ser compilados en Pandoc.
+# ==============================================================================
 
 ALL: INIT_ALL C11 C12 C21 C22 C31 C32 C41 C42 FCI PE TFG FIN
 
- 
-  # Mensaje y preparaciones iniciales de compilación
- #
+
+# Mensaje y preparaciones iniciales de compilación
 
 INIT_ALL:
 	@printf    "\n   \033[1;34m=================================================\n"
@@ -410,9 +428,7 @@ INIT_ALL:
 	@printf    "Creando raíz de archivos compilados\n\n"
 	@mkdir   $(OUT)
 
- #
-  # 1º 1er cuatrimestre
- #
+# 1º 1er cuatrimestre
 
 C11: INIT_C11 ALEM CA FFT FP FS
 INIT_C11:
@@ -442,9 +458,7 @@ FS: INIT_FS
 INIT_FS:
 	$(call creadirv, "Fundamentos del software", $(FS_OUT))
 
- #
-  # 1º 2º cuatrimestre
- #
+# 1º 2º cuatrimestre
 
 C12: INIT_C12 ES IES LMD MP TOC
 INIT_C12:
@@ -475,9 +489,7 @@ TOC: INIT_TOC
 INIT_TOC:
 	$(call creadirv, "Tecnología y organización de los computadores", $(TOC_OUT))
 
- #
-  # 2º 1er cuatrimestre
- #
+# 2º 1er cuatrimestre
 
 C21: INIT_C21 EC ED PDOO SCD SO
 INIT_C21:
@@ -508,9 +520,7 @@ SO: INIT_SO
 INIT_SO:
 	$(call creadirv, "Sistemas operativos", $(SO_OUT))
 
- #
-  # 2º 2º cuatrimestre
- #
+# 2º 2º cuatrimestre
 
 C22: INIT_C22 AC ALG FBD FIS IA
 INIT_C22:
@@ -541,9 +551,7 @@ IA: INIT_IA
 INIT_IA:
 	$(call creadirv, "Inteligencia artificial", $(IA_OUT))
 
- #
-  # 3º 1er cuatrimestre
- #
+# 3º 1er cuatrimestre
 
 C31: INIT_C31 DDSI FR IG ISE MC
 INIT_C31:
@@ -574,17 +582,13 @@ MC: INIT_MC
 INIT_MC:
 	$(call creadirv, "Modelos de computación", $(MC_OUT))
 
- #
-  # 3º 2º cuatrimestre
- #
+# 3º 2º cuatrimestre
 
 C32: INIT_C32 CSI32 IC32 IS32 SI32 TI32
 INIT_C32:
 	$(call creadir, "3º 2º cuatrimestre", $(C32_OUT))
 
- #
-  # Computación y sistemas inteligentes - 3º 2º cuatrimestre
- #
+# Computación y sistemas inteligentes - 3º 2º cuatrimestre
 
 CSI32: INIT_CSI32 AA IC MCA MH TSI
 INIT_CSI32:
@@ -615,9 +619,7 @@ TSI: INIT_TSI
 INIT_TSI:
 	$(call creadirv, "Técnicas de los sistemas inteligentes", $(TSI_OUT))
 
- #
-  # Ingeniería de computadores - 3º 2º cuatrimestre
- #
+# Ingeniería de computadores - 3º 2º cuatrimestre
 
 IC32: INIT_IC32 ACAP AS DHD DSE SMP
 INIT_IC32:
@@ -648,9 +650,7 @@ SMP: INIT_SMP
 INIT_SMP:
 	$(call creadirv, "Sistemas con microprocesadores", $(SMP_OUT))
 
- #
-  # Ingeniería del software - 3º 2º cuatrimestre
- #
+# Ingeniería del software - 3º 2º cuatrimestre
 
 IS32: INIT_IS32 DIU DS DSD SG SIBW
 INIT_IS32:
@@ -681,9 +681,7 @@ SIBW: INIT_SIBW
 INIT_SIBW:
 	$(call creadirv, "Sistemas de información basados en web", $(SIBW_OUT))
 
- #
-  # Sistemas de información - 3º 2º cuatrimestre
- #
+# Sistemas de información - 3º 2º cuatrimestre
 
 SI32: INIT_SI32 ABD ISI PW SIE SMD
 INIT_SI32:
@@ -714,9 +712,7 @@ SMD: INIT_SMD
 INIT_SMD:
 	$(call creadirv, "Sistemas multidimensionales", $(SMD_OUT))
 
- #
-  # Tecnologías de la información - 3º 2º cuatrimestre
- #
+# Tecnologías de la información - 3º 2º cuatrimestre
 
 TI32: INIT_TI32 CUIA SMM SWAP TDRC TW
 INIT_TI32:
@@ -747,17 +743,13 @@ TW: INIT_TW
 INIT_TW:
 	$(call creadirv, "Tecnologías web", $(TW_OUT))
 
- #
-  # 4º 1er cuatrimestre
- #
+# 4º 1er cuatrimestre
 
 C41: INIT_C41 CSI41 IC41 IS41 SI41 TI41
 INIT_C41:
 	$(call creadir, "4º 1er cuatrimestre", $(C41_OUT))
 
- #
-  # Computación y sistemas inteligentes - 4º 1er cuatrimestre
- #
+# Computación y sistemas inteligentes - 4º 1er cuatrimestre
 
 CSI41: INIT_CSI41 NPI PL PTC SS TIC VC
 INIT_CSI41:
@@ -793,9 +785,7 @@ VC: INIT_VC
 INIT_VC:
 	$(call creadirv, "Visión por computador", $(VC_OUT))
 
- #
-  # Ingeniería de computadores - 4º 1er cuatrimestre
- #
+# Ingeniería de computadores - 4º 1er cuatrimestre
 
 IC41: INIT_IC41 CPD II SE TE TR
 INIT_IC41:
@@ -826,9 +816,7 @@ TR: INIT_TR
 INIT_TR:
 	$(call creadirv, "Tecnologías de red", $(TR_OUT))
 
- #
-  # Ingeniería del software - 4º 1er cuatrimestre
- #
+# Ingeniería del software - 4º 1er cuatrimestre
 
 IS41: INIT_IS41 DBA DGP LP MDA PGV
 INIT_IS41:
@@ -859,9 +847,7 @@ PGV: INIT_PGV
 INIT_PGV:
 	$(call creadirv, "Programación gráfica de videojuegos", $(PGV_OUT))
 
- #
-  # Sistemas de información - 4º 1er cuatrimestre
- #
+# Sistemas de información - 4º 1er cuatrimestre
 
 SI41: INIT_SI41 BDD GRD IN RINF RSC SIG
 INIT_SI41:
@@ -897,9 +883,7 @@ SIG: INIT_SIG
 INIT_SIG:
 	$(call creadirv, "Sistemas de información geográficos", $(SIG_OUT))
 
- #
-  # Tecnologías de la información - 4º 1er cuatrimestre
- #
+# Tecnologías de la información - 4º 1er cuatrimestre
 
 TI41: INIT_TI41 CRIM DAI IV SPSI TID
 INIT_TI41:
@@ -930,17 +914,13 @@ TID: INIT_TID
 INIT_TID:
 	$(call creadirv, "Tratamiento de imágenes digitales", $(TID_OUT))
 
- #
-  # 4º 2º cuatrimestre
- #
+# 4º 2º cuatrimestre
 
 C42: INIT_C42 CSI42 IC42 IS42 SI42 TI42
 INIT_C42:
 	$(call creadir, "4º 2º cuatrimestre", $(C42_OUT))
 
- #
-  # Computación y sistemas inteligentes - 4º 2º cuatrimestre
- #
+# Computación y sistemas inteligentes - 4º 2º cuatrimestre
 
 CSI42: INIT_CSI42 CRIP PLD RI
 INIT_CSI42:
@@ -961,9 +941,7 @@ RI: INIT_RI
 INIT_RI:
 	$(call creadirv, "Robótica industrial", $(RI_OUT))
 
- #
-  # Ingeniería de computadores - 4º 2º cuatrimestre
- #
+# Ingeniería de computadores - 4º 2º cuatrimestre
 
 IC42: INIT_IC42 CII MEI
 INIT_IC42:
@@ -979,9 +957,7 @@ MEI: INIT_MEI
 INIT_MEI:
 	$(call creadirv, "Mantenimiento de equipos informáticos", $(MEI_OUT))
 
- #
-  # Ingeniería del software - 4º 2º cuatrimestre
- #
+# Ingeniería del software - 4º 2º cuatrimestre
 
 IS42: INIT_IS42 AO NTP PPR
 INIT_IS42:
@@ -1002,9 +978,7 @@ PPR: INIT_PPR
 INIT_PPR:
 	$(call creadirv, "Programaciones paralelas", $(PPR_OUT))
 
- #
-  # Sistemas de información - 4º 2º cuatrimestre
- #
+# Sistemas de información - 4º 2º cuatrimestre
 
 SI42: INIT_SI42 PDIH SCGC
 INIT_SI42:
@@ -1020,9 +994,7 @@ SCGC: INIT_SCGC
 INIT_SCGC:
 	$(call creadirv, "Sistemas cooperativos y gestión de contenidos", $(SCGC_OUT))
 
- #
-  # Tecnologías de la información - 4º 2º cuatrimestre
- #
+# Tecnologías de la información - 4º 2º cuatrimestre
 
 TI42: INIT_TI42 PDM PDS RMS
 INIT_TI42:
@@ -1043,9 +1015,7 @@ RMS: INIT_RMS
 INIT_RMS:
 	$(call creadirv, "Redes multiservicio", $(RMS_OUT))
 
- #
-  # Formación complementaria interdisciplinar
- #
+# Formación complementaria interdisciplinar
 
 FCI: INIT_FCI CEGE DI EISI
 INIT_FCI:
@@ -1066,25 +1036,19 @@ EISI: INIT_EISI
 INIT_EISI:
 	$(call creadirv, ("Ética, informática y sociedad de la información"), $(EISI_OUT))
 
- #
-  # Prácticas de empresa
- #
+# Prácticas de empresa
 
 PE: INIT_PE
 INIT_PE:
 	$(call creadirv, "Prácticas de empresa", $(PE_OUT))
 
- #
-  # Trabajos de fin de grado
- #
+# Trabajos de fin de grado
 
 TFG: INIT_TFG
 INIT_TFG:
 	$(call creadirv, "Trabajo de fin de grado", $(TFG_OUT))
 
- #
-  # Mensaje de despedida
- #
+# Mensaje de despedida
 
 FIN:
 	@rm -rf $(HOME)/.cache
