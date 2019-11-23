@@ -1,0 +1,29 @@
+\usepackage{xcolor}
+\usepackage{textcomp}
+
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+\definecolor{comment}{RGB}{0,128,0} % dark green
+\definecolor{string}{RGB}{255,0,0}  % red
+\definecolor{keyword}{RGB}{0,0,255} % blue
+
+\lstdefinestyle{c}{
+	backgroundcolor=\color{backgroundColour},
+	commentstyle=\color{comment},
+	stringstyle=\color{string},
+    keywordstyle=\color{magenta},
+    basicstyle=\footnotesize,
+	numberstyle=\tiny\color{mGray},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	frame=lines,
+	breaklines=true,
+	prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	showstringspaces=false,
+	upquote=true,
+	tabsize=2,
+}
