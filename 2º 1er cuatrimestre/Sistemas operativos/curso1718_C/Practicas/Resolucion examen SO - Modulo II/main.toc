@@ -1,0 +1,3 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Enunciado}{2}{section.1}
+\contentsline {section}{\numberline {2}C\IeC {\'o}digo}{3}{section.2}
