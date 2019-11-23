@@ -1,0 +1,25 @@
+---
+title: "ESTRUCTURAS DE DATOS - RETO 2"
+subtitle: "Ingeniería Informática - Universidad de Granada"
+author: [Raúl Martín, Clara Romero, Atanasio Rubio]
+date: \today
+keywords: [UGR, DEIIT, Apuntes, Ingeniería informática]
+titlepage: true
+titlepage-rule-color: 272d2d
+toc-own-page: true
+lang: "es"
+header-includes: \usepackage{tikz-qtree}
+...
+
+\begin{center}\end{center}
+
+\vfill
+**Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)**
+
+Salvo que el Licenciante se haya comprometido mediante un acuerdo por separado, en la medida de lo posible el Licenciante ofrece el Material Licenciado tal como es y tal como está disponible y no se hace responsable ni ofrece garantías de ningún tipo respecto al Material Licenciado, ya sea de manera expresa, implícita, legal u otra. Esto incluye, de manera no taxativa, las garantías de título, comerciabilidad, idoneidad para un propósito en particular, no infracción, ausencia de vicios ocultos u otros defectos, la exactitud, la presencia o la ausencia de errores, sean o no conocidos o detectables. Cuando no se permita, totalmente o en parte, la declaración de ausencia de garantías, a Usted puede no aplicársele esta exclusión.
+
+En la medida de lo posible, en ningún caso el Licenciante será responsable ante Usted por ninguna teoría legal (incluyendo, de manera no taxativa, la negligencia) o de otra manera por cualquier pérdida, coste, gasto o daño directo, especial, indirecto, incidental, consecuente, punitivo, ejemplar u otro que surja de esta Licencia Pública o del uso del Material Licenciado, incluso cuando el Licenciante haya sido advertido de la posibilidad de tales pérdidas, costes, gastos o daños. Cuando no se permita la limitación de responsabilidad, ya sea totalmente o en parte, a Usted puede no aplicársele esta limitación.
+
+La renuncia de garantías y la limitación de responsabilidad descritas anteriormente deberán ser interpretadas, en la medida de lo posible, como lo más próximo a una exención y renuncia absoluta a todo tipo de responsabilidad.
+
+\pagebreak
