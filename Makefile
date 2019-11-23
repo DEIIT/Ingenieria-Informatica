@@ -508,7 +508,11 @@ INIT_ED:
 
 PDOO: INIT_PDOO
 INIT_PDOO:
-	$(call creadirv, "Programación y diseño orientado a objetos", $(PDOO_OUT))
+	$(call creadir, "Programación y diseño orientado a objetos", $(PDOO_OUT))
+	$(call md-pdf,\
+	"PDOO - Teoría 1920_D", \
+	$(PDOO)/Curso\ 1920_D/Teoría, \
+	$(PDOO_OUT))
 
 
 SCD: INIT_SCD
