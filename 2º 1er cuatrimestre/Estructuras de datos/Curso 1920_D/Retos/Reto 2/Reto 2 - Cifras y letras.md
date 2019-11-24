@@ -1,4 +1,4 @@
-# 1 - ENUNCIADO
+# §1 - ENUNCIADO
 
 Dado un conjunto de 6 enteros sacados aleatoriamente del conjunto:
 
@@ -61,7 +61,7 @@ Es un reto intelectualmente interesante para un ingeniero informático.
 
 \pagebreak
 
-# 2 - CONSIDERACIONES PREAMBULARES
+# §2 - CONSIDERACIONES PREAMBULARES
 
 Dados seis números aleatorios tomados de una reserva formada por nueve números de una cifra, cuatro de dos y uno de tres, buscamos encontrar, mediante las cuatro operaciones elementales, un número de 3 cifras.
 Debido a que 9 de cada 14 números ($~64.28%$) tomados en cada caso van a ser de una cifra, parece sensato comenzar buscando los valores más aproximados a la solución.
@@ -77,9 +77,9 @@ Es importante tener en cuenta que, tras la primera aproximación, sí se pueden 
 
 \pagebreak
 
-# 3 - DESARROLLO DEL ALGORITMO
+# §3 - DESARROLLO DEL ALGORITMO
 
-## 3.1 - Resumen esquemático
+## §3.1 - Resumen esquemático
 
 Para intentar resolver este problema vamos a utilizar un algoritmo que busque aproximarse al valor objetivo lo más rápido posible en su primer paso.
 De esta forma, esperamos simplificar las siguientes operaciones buscando aproximaciones a un objetivo más pequeño con un menor número de valores.
@@ -109,7 +109,7 @@ De esta forma, esperamos simplificar las siguientes operaciones buscando aproxim
 
 **FIN**
 
-## 3.2 - TDA "Aproximación"
+## §3.2 - TDA "Aproximación"
 
 El tipo de dato abstracto `Aprox` está compuesto por tres atributos:
 
@@ -127,7 +127,7 @@ operaciones = "(4 * 9) + (10 * 50)"
 
 Consideramos que dos `Aprox` son iguales si tienen el mismo `valor` y `candidatos`.
 
-## 3.3 - Cálculo de las sumas, diferencias, productos y cocientes de todas las combinaciones de candidatos
+## §3.3 - Cálculo de las sumas, diferencias, productos y cocientes de todas las combinaciones de candidatos
 
 Para calcular las sumas, diferencias, productos y cocientes de todas las combinaciones de números crearemos cuatro matrices cuadradas de tamaño $candidatos\ restantes$ en las que insertaremos los resultados de todas las respectivas operaciones con las diferentes combinaciones de candidatos.
 Debido a las restricciones del reto y para no utilizar más memoria de la necesaria, suprimimos todos los valores de la diagonal principal y todos los que quedan a su derecha.
@@ -222,7 +222,7 @@ Donde $k$ es el número de candidatos y $x$, el número de aproximaciones no vá
 
 Si durante el cálculo de los elementos de la matriz se llegara al objetivo, damos por finalizado el ejercicio.
 
-## 3.4 - Ordenación de todas las aproximaciones por cercanía a la solución.
+## §3.4 - Ordenación de todas las aproximaciones por cercanía a la solución.
 
 Obtenido el vector completo del paso anterior con las primeras aproximaciones, procedemos a ordenarlas por cercanía a la solución.
 Para ello, definimos la diferencia de cada `Aprox` al objetivo como $|valor-objetivo|$ y los ordenamos de menor a mayor diferencia.
@@ -230,7 +230,7 @@ Para ello, definimos la diferencia de cada `Aprox` al objetivo como $|valor-obje
 Como consideramos antes de comenzar el ejercicio, si dos `Aprox` tuvieran la misma diferencia al objetivo, se considerará más cercano aquél cuyo vector de candidatos sea de menor tamaño.
 En caso de que dos `Aprox` tuvieran el mismo `valor` y el mismo `candidatos` **no** se eliminan por considerarse duplicados, ya que existe la posibilidad de que se elijan varios candidatos iguales al inicio del ejercicio.
 
-## 3.5 - Iteraciones posteriores
+## §3.5 - Iteraciones posteriores
 
 Una vez ordenado el vector de `Aprox`, lo recorremos secuencialmente realizando las operaciones anteriores recursivamente hasta encontrar (o no) una combinación de operaciones cuyo resultado sea el valor objetivo.
 
@@ -256,11 +256,11 @@ De forma recursiva, vamos realizando los mismo productos, sumas, diferencias y d
 
 \pagebreak
 
-# 4 - EJEMPLO DE CÁLCULO EXITOSO
+# §4 - EJEMPLO DE CÁLCULO EXITOSO
 
 Detallamos aquí el funcionamiento del algoritmo para hallar la solución del enunciado, con candidatos $C={4,6,8,9,10,75}$ y número objetivo $835$.
 
-## 4.1 - Cálculo de las matrices iniciales
+## §4.1 - Cálculo de las matrices iniciales
 
 \begin{center}
 $\begin{matrix}
@@ -316,7 +316,7 @@ $\begin{matrix}
 Matriz de cocientes con resultados inválidos (izquierda) y sin ellos (derecha)
 \end{center}
 
-## 4.2 - Ordenación de las aproximaciones obtenidas
+## §4.2 - Ordenación de las aproximaciones obtenidas
 
 De las operaciones anteriores obtenemos las siguientes aproximaciones, que representamos esquemáticamente como $valor[candidatos]$:
 
@@ -368,7 +368,7 @@ $48,40,36,32,24,19,18,17,16,15,14,14,13,12,10,6,5,4,4,3,2,2,2,2,1,1\}$
 
 \pagebreak
 
-## 4.3 - Iteraciones posteriores
+## §4.3 - Iteraciones posteriores
 
 Tras muchos cálculos infructuosos, se llega al `Aprox` $2[4,8]$, el único `Aprox` obtenido de la matriz de cocientes.
 Con esta aproximación, recuperamos las matrices anteriores sin las filas ni columnas de los candidatos $4$ y $8$:
@@ -524,7 +524,7 @@ $$\bigg(\frac{8}{4}+9\bigg)\cdot11+10$$
 
 \pagebreak
 
-# 5 - EJEMPLO DE CÁLCULO NO EXITOSO
+# §5 - EJEMPLO DE CÁLCULO NO EXITOSO
 
 Como ejemplo simple de un cálculo no exitoso, supongamos los siguientes datos:
 
