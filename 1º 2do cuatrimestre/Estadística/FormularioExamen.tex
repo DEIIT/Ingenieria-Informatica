@@ -1,0 +1,210 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Cristina Sánchez Justicia }
+\title{Apuntes mínimos examen final Estadística}
+\begin{document}
+\section*{Estadística: Apuntes para el examen final}
+\subsection*{1. Estadística descriptiva unidimensional}
+
+Tabla: $x_i  n_i  N_i  f_i  F_i  a_i  h_i$
+\newline
+$a_i = e_i - e_{i-1}$
+\newline
+$h_i = \frac{n_i}{a_i}$
+\\\\
+\\
+\\
+\textbf{Variables discretas: }
+
+Mediana: \[ \exists F_i = 0.5 \longrightarrow Me = \frac { x_i + x_{i+1}}{2} \]
+\newline
+\newline
+\newline
+\textbf{Variables continuas: }
+
+Mediana: \[ \nexists F_i = 0.5 , F_i > 0.5 \longrightarrow Me = e_{i-1} + \frac {0.5 - F_{i-1}}{f_i} a_i \]
+
+Notación intervalo percentil 74 $ I_{P_{74}}$
+
+Moda: \[ max h_i \longrightarrow Mo = e_{i-1} + \frac {h_i - h_{i-1}}{ (h_i - h_{i-1}) + (h_i - h_{i+1}) } a_i\]
+\newline
+\newline
+\newline
+\textbf{Común: }
+
+Varianza:  \[ \sigma ^ 2 = \frac {\sum x_i ^ 2 n_i}{N} - \overline{x}^2 \]
+
+Tabla para calcular la varianza: $ x_i n_i x_in_i x^2_in_i $\\
+
+
+Desviación típica: si es más baja, la población está mejor
+representada por la media
+\newline
+
+Coeficiente de variación: \[ CV_x = \frac {\sigma _ x} {\overline x} \]
+
+Sirve para comparar muestras. Mientras menor es, más homogénea es la muestra.
+\newpage
+
+             \subsection*{2. Estadística descriptiva bidimensional }
+
+\textbf{Covarianza: } \[ \sigma_{xy} =
+\frac { \sum _ {i} { \sum _ {j} { x_i y_j n_{ij} } }}{N} - \overline x \overline y \]
+
+Como debe quedar en la calculadora: $ \sum xy \div n - \overline x x \overline y $
+\newline
+\newline
+Significado de $\sigma _ {xy} $:
+
+- Positivo: Las variables varían en el mismo sentido
+
+- Negativo: Las variables varían en sentidos opuestos
+
+- Cero: La relación no es lineal
+\newline
+\newline
+\textbf{Recta de regresión lineal: }
+\[Y = f(X) = a + bx \]
+\[ b = \frac {\sigma _{xy}}{\sigma _ x ^ 2} , a = \overline y - b \overline x \]
+\textbf{Coeficiente de correlación lineal: }
+\newline
+$ -1 \leqslant r \leqslant 1 $
+\[ r = \frac {\sigma _ {xy}}{\sigma _ x \sigma _ y} = \sqrt{b b'}\]
+La relación lineal es mayor cuando $|r| \simeq 1$
+\newline
+\textbf{Coeficiente de determinación: }
+\[ R ^ 2 = 1 - \frac{\sigma _ {res} ^ 2}{\sigma _ y ^ 2}\]
+\[ \sigma _ {res} ^ 2 = \sigma _ y ^ 2 (1 - r ^ 2 ) \]
+Posición de las rectas:
+
+$r \neq 1$ Las rectas se cortan en $(\overline x , \overline y )$
+
+r = 1 Las rectas coinciden
+
+r = 0 No hay relación entre las variables
+
+\newpage
+\subsection*{3. Probabilidad}
+\textbf{Teorema de la probabilidad total: }
+\[ P(B) = \sum P(A_i) P(B|A_i) \]
+\textbf { Teorema de Bayes: }
+
+H = hipótesis
+E = evidencia
+
+\[ P(H|E) = \frac {P(H) P(E|H)}{P(E)} = \frac {P(H \cap E)} {P(E)} \]
+
+\newpage
+\subsection*{4. Variables aleatorias }
+\textbf{Discreta: }
+\newline
+
+$E(X) = \sum x_i p_i $
+\newline
+
+$Var(X) = E(X ^ 2 ) - E (X) ^ 2$
+\newline
+\newline
+\textbf{Continua: }
+\newline
+
+Función de densidad:
+\[ P(x_i < X < x _ j) = \int _ {x _ i} ^ {x _ j} f(x) dx  \]
+
+Función de distribución:
+\[ F(x) = \int _ { - \infty} ^ x f(t)dt\]
+
+Media y varianza:
+\[ E(x) = \int _ {- \infty} ^ {\infty} x f(x)dx , Var (x) = E(x^ 2) - E(x) ^ 2\]
+
+\newpage
+\subsection*{5. Modelos de distribuciones }
+\textbf{Binomial: } $ X \rightsquigarrow B(n, p) $
+
+\[ P [X = K ] = \binom {n}{k} p ^k (1 - p) ^ {n - k} \]
+
+$ E[x] = np $
+\newline
+
+$ Var[x] = np (1 - p ) $
+\newline
+\newline
+\newline
+\newline
+\textbf{Poisson: } $X \rightsquigarrow P (\lambda) $
+
+\[ P[ X = k ] = e ^ {-\lambda} \frac{\lambda ^ k }{ K ! } \]
+
+$ E [X] = Var [X] = \lambda $
+\newline
+\newline
+\newline
+\textbf{Normal: } $ X \rightsquigarrow N (\mu, \sigma) $
+\newline
+
+$ Z = \frac{X - \mu}{\sigma} $
+                                                 \newline
+\newline
+\newline
+\newline
+\textbf{APROXIMACIONES: }
+\newline
+
+\textbf{B (n,p) $\approx$ P ( np)} si $ n \geqslant 30$ , $ p < 0.1$ y $ np \leqslant 5$
+\newline
+
+\textbf{B(n,p $\approx $ N (np, $\sqrt{np(1-p)}$)} si $ n \geqslant 30 $, $  np > 5$ y $p \in (0.1 , 0.9) $ 
+\newline
+
+\textbf{P($\lambda$) $\approx $ N ($\lambda, \lambda$)} si $\lambda \geqslant 10 $ 
+\\\\
+\\
+\textbf{Corrección por continuidad: }
+\[ P [x = k ] = P [k - 0'5 \leqslant X \leqslant k + 0'5] \]
+
+\newpage
+\subsection*{6, 7 y 8. Contrastes de hipótesis }
+\textbf{Cuasivarianza muestral: }
+\[ s ^ 2 = \frac{n}{n - 1} \sigma ^ 2 \]
+\\
+\\
+El resto está en los formularios
+
+\newpage
+\subsection*{9. Optimización sin restricciones }
+\subsubsection{Gradiente }
+\[ \bigtriangledown f(x,y) = (\frac{d f(x, y)}{dx},\frac{df(x,y)}{dy}) \] 
+\subsubsection{Puntos críticos (a,b) }
+\[ \bigtriangledown f(x,y) = 0 \]
+Resolver sistema de ecuaciones
+\subsubsection{Matriz Hessiana }
+\[ H [f(x,y)] =  
+\left[ {\begin{array}{cc}
+\frac{d^2f(x,y)}{dx^2} & \frac{d^2f(x,y)}{dxdy} \\
+\frac{d^2f(x,y)}{dxdy} & \frac{d^2f(x,y)}{dy^2} \\
+\end{array} } \right]
+\]
+\subsubsection{Menores principales}
+\[ H _ {1x1} = \frac{d^2 f(x,y)}{dx^2}\]
+\[ H _ {2x2} = |H [f(x,y)]|\]
+
+\subsubsection{Analizar signo en (a,b)}
+- Si $H _ {1x1} > 0 $ y $H _ {2x2} \geqslant 0$ H es definida positiva (Mínimo) 
+\\
+- Si $H _ {1x1} < 0 $ y $H _ {2x2} \geqslant 0$ H es definida negativa (Máximo) 
+\\
+- Si $H _ {1x1} = 0 $ y $H _ {2x2} \geqslant 0$ punto dudoso
+\\
+- Si $ H _ {2x2} < 0 $ H es indefinida (Punto de silla) 
+Representar las funciones en www.wolframalpha.com
+
+\vspace*{\fill}
+Si veis algún error, mi telegram es @cristinasj 
+\end{document}
+
+                                                                     1,1           Top
