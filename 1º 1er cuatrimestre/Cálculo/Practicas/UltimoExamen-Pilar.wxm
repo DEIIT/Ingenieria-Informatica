@@ -1,0 +1,209 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 18.02.0 ] */
+/* [wxMaxima: title   start ]
+José Santos Salvador
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: section start ]
+Ejercicio
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+nr1(expr,var,ini,errab,errel):=block(
+    [x0:ini,x1,dfx0,j,tol:10^(-8)],
+    local(f,df),
+    define(f(x),subst(x,var,expr)),
+    define(df(x),diff(f(x),x)),
+    for i:1 thru 15 do(
+        j:i,
+        dfx0:df(x0),
+        if abs(df(x0))<10^(-5) then 
+        error("elige otro valor inicial"),
+        x1:x0-f(x0)/dfx0,
+        if abs(x0-x1)<errab then return(),
+        if abs(x0-x1)/abs(x1)<errel then return(),
+        x0:x1
+        ),
+    if j=15 then error("elige otro valor inicial") else x1,
+    print(j),
+    print(x1)
+)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):=sin(x^2-8*x+5)-atan((x+1)/x^2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([f(x)], [x,1,2],
+ [gnuplot_postamble, "set zeroaxis;"])$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+nr1(f(x),x,0.1,10^-8,10^-8);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Encuentra con newton-Raphson la solucion a la iteracion 9
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+kill(all); 
+define(f(x),sin(x^2-8*x+5)-atan((x+1)/x^2));   /* función */
+a:1;b:2;   /* extremos a y b del  intervalo */ 
+err_a:10^(-8);  /* error absoluto */ 
+j:0;
+while abs(b-a)/2 > err_a 
+   do(   
+    c:(a+b)/2,
+    j:j+1,
+    if f(c)=0 then return(c), 
+    if f(a)*f(c)<0 then b:c else a:c
+    );
+[j];
+float(c);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+La biseccion encuentra la solucion en la iteracion 26
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: section start ]
+Ejercicio
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):=log(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load(interpol);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+naturales:[[1,f(1)],[2,f(2)],[3,f(3)],[4,f(4)],[5,f(5)]];
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+define(s(x),expand(lagrange(naturales)));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw2d(
+point_type=7,
+color=red,
+points(naturales),
+color=dark-green,
+explicit(s(x),x,0,7),
+color=blue,
+explicit(f(x),x,0,7),
+yrange=[-1,3]
+);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a:float(s(%pi));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b:float(f(%pi));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+abs(b-a);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Ese es el error que se comete en la aproximacion
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: section start ]
+Ejercicio
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: comment start ]
+Para calcular el área de un solido en revolución es utilizar: área:2*%pi*integrate(f(x)*sqrt(1+df(x)^2),x,1,inf);
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: comment start ]
+he estado realizando dibujos en el papel y creo que no he llegado a sacar la funcion, ya que simplemente he puesto el cono en el eje OX y me salia en el lateral tres puntos, (0,h), (r,0) y el (0,0), luego he sacado la recta dada esos dos puntos(la hipotenusa)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):=x*(-5/2)+5;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ define(df(x),diff(f(x),x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ área:2*%pi*integrate(f(x)*sqrt(1+df(x)^2),x,1,inf);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+ya que no he podido realizar este ejercicio, voy a pegar un ejercicio que hice tambien de esta sección, ya que llevo casi todo el examen mirando y no lo veo
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: subsect start ]
+Se suele llamar “La trompeta de Gabriel” a
+  la figura que se obtiene al girar alrededor del
+  eje de abscisas la gráfica de la función f(x)=1/x entre 1 e infinito.
+  Calcula el valor del volumen que encierra y la superficie de dicha figura.
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: input   start ] */
+define(f(x),1/x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ define(df(x),diff(f(x),x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([1/x], [x,1,10])$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ área:2*%pi*integrate(f(x)*sqrt(1+df(x)^2),x,1,inf);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ volumen:%pi*integrate(f(x)^2,x,1,inf);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 18.02.0"$
