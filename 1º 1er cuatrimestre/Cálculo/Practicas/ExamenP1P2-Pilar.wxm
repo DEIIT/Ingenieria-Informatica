@@ -1,0 +1,203 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 18.02.0 ] */
+/* [wxMaxima: comment start ]
+
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: title   start ]
+Primera nota maxima: José Santos Salvador
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: section start ]
+Ejercicio 2.5. Representa la curva cos(x) ^2 − x sen(x) ^2 en el intervalo [−π, π] y sobre ella 5 puntos cuyo tamaño y color debes elegir tú.
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):=cos(x)^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+g(x):=x*sin(x)^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+h(x):=f(x)-g(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw2d (
+color = blue,
+line_width = 5,
+explicit (h(x), x, -%pi, %pi),
+color=green,
+point_type=6,
+point_size=3,
+points([-2,-1.5,1.2,0,1.5],[h(-2),h(-1.5),h(1.2),h(0),h(1.5)]),
+yaxis = true, xaxis = true );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+¿Sabrías hacer lo mismo con 8 puntos elegidos aleato-
+riamente? 
+Se haría usando random(valor_deseado) para obtener el valor de la x y de la y de forma aleatoria y par obtener puntos en negativo seria -random(5), donde devolveria valores menores o iguales a x-1
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+num1:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+num2:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+num3:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+num4:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+-num5:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+-num6:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+-num7:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+-num8:random(3.14);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw2d (
+color = blue,
+line_width = 5,
+explicit (h(x), x, -%pi, %pi),
+color=green,
+point_type=6,
+point_size=3,
+points([num1,num2,num3,num4,-num5,-num6,-num7,-num8]
+        ,[h(num1),h(num2),h(num3),h(num4),h(-num5),h(-num6),h(-num7),h(-num8)]),
+yaxis = true, xaxis = true );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: section start ]
+Define las funciones f(x)=e^−0.4x, g(x)=5cos(πx), y h(x)=f(x)g(x). Dibuja las tres funciones en distintos colores.Compara los ceros de h con los de f y g.
+Considera i(x)=5f(x), j(x)=−5f(x).Dibuja i, j y h. ¿Por qué a las funciones i(x) y j(x) se les llaman envolventes de h superior e inferior, respectivamente?
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= exp(-0.4 * x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+g(x):=5*cos(%pi*x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+h(x):=f(x)*g(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw2d ( color = red,
+line_width = 5,
+explicit (f(x), x, -5, 5 ),
+color = blue,
+line_width = 5,
+explicit (g(x), x, -5, 5),
+color = black,
+line_width = 5,
+explicit (h(x), x, -5, 5),
+yaxis = true, xaxis = true );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+vamos a comparar los ceros evaluando cada funcion
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+g(0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+h(0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: subsect start ]
+Considera i(x)=5f(x), j(x)=−5f(x).Dibuja i, j y h. ¿Por qué a las funciones i(x) y j(x) se les llaman envolventes de h superior e inferior, respectivamente?
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: input   start ] */
+i(x):=5*f(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+j(x):=-5*f(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw2d ( color = light_blue,
+line_width = 5,
+explicit (i(x), x, -5, 5 ),
+color = red,
+line_width = 5,
+explicit (j(x), x, -5, 5),
+color = dark_blue,
+line_width = 5,
+explicit (h(x), x, -5, 5),
+yaxis = true, xaxis = true );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Como se puede ver, las funciones i(x) y j(x) envuelven a la función h(x) por arriba y por abajo, de ahí que se llamen envolventes superior e inferior respectivamente
+   [wxMaxima: comment end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 18.02.0"$

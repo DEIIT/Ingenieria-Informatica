@@ -1,0 +1,160 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 18.02.0 ] */
+/* [wxMaxima: section start ]
+Ejercicio
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):=4*%e^((-x^2)/7)+sin(3*x+1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw2d(color=dark-red,
+        line_width=2,
+        explicit(f(x),x,0,2*%pi),
+        point_size=2,
+        color=blue,
+        point_type=7,
+        points([[s1,f(s1)],[s2,f(s2)],[s3,f(s3)],[s4,f(s4)]])
+    );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+s1:find_root(f(x),x,2,3.5);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+s2:find_root(f(x),x,3.5,4);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+s3:find_root(f(x),x,3,5);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+s4:find_root(f(x),x,5,6);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+biseccion(expr,var,ext_inf,ext_sup):=   
+    block(     
+        [a,b,c, /* extremos y punto medio */     	
+         fa,fb,fc, /* valores de la función en dichos puntos */     	
+         contador:0, /* número de repeticiones */     	
+         tolx:10^(-5),tolfx:10^(-5) /* error permitido */     	
+         ],     
+        local(f),     
+        define(f(x),subst(x,var,expr)),     
+        a:float(min(ext_inf,ext_sup)),     
+        b:float(max(ext_inf,ext_sup)),     
+        c:(a+b)*0.5,     
+        fa:f(a),     
+        fb:f(b),     
+        fc:f(c),     
+        if abs(fc)<tolfx then return([c,1,(b-a)*0.5,fc]),     
+        if sign(fa)=sign(fb) then error("la función no cambia de signo en los extremos"),     
+        while ((b-a)>tolx and abs(fc)>tolfx) 
+            do(       
+                contador:contador+1,       
+                c:float((a+b)/2),       
+                fc:f(c), 
+                if abs(fc) < tolfx then return(),      
+                if sign(fa) = sign(fc) then (a:c,fa:fc) else (b:c,fb:fc)       
+                ),     
+        [c,contador,(b-a)*0.5,f(c)]   
+    )$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+biseccion(f(x),x,2,3.5);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+biseccion(f(x),x,3.5,4);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+biseccion(f(x),x,3,5);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+biseccion(f(x),x,5,6);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: section start ]
+Ejercicio
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+g(x):=x^2+y^2=6;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+h(x):=x^2-y^2=1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw2d (
+    line_width=2,
+    color = red,
+    implicit (g(x), x, -3, 3, y, -3, 3),
+    color = blue,
+    implicit (h(x), x, -3, 3, y, -3, 3),
+    color=black,
+    point_type=filled_circle,
+    point_size=1.5,
+    points([p1,p2,p3,p4])
+);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+sol:solve([g(x),h(x)],[x,y]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+p1:map(rhs,sol[1]);
+p2:map(rhs,sol[2]);
+p3:map(rhs,sol[3]);
+p4:map(rhs,sol[4]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: section start ]
+Ejercicio 
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+suma_sucesion(n):=block(
+    [suma:0],
+    for i:1 thru n do(suma:suma+(1+2/i^2)^i),
+    suma
+);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+float(suma_sucesion(30));
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 18.02.0"$
